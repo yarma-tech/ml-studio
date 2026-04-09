@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+venv/
+.env
+data/uploads/*
+data/trained_models/*
+!data/uploads/.gitkeep
+!data/trained_models/.gitkeep
+node_modules/
+.next/
