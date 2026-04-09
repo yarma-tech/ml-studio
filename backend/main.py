@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from api.datasets import router as datasets_router
 
 app = FastAPI(title="ML Studio API")
 
@@ -10,6 +11,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+app.include_router(datasets_router)
 
 
 @app.get("/api/health")
