@@ -30,7 +30,11 @@ def train_models(data: dict, task_type: str, algorithms: list[str],
         model_class, param_grid = registry[algo_name]
 
         if hyperparameter_tuning and param_grid:
-            grid = GridSearchCV(model_class(), param_grid, cv=cv_folds, scoring=None, n_jobs=-1)
+            # Limit cv folds to number of samples in smallest class
+            actual_cv = min(cv_folds, len(data["X_train"]))
+            if actual_cv < 2:
+                actual_cv = 2
+            grid = GridSearchCV(model_class(), param_grid, cv=actual_cv, scoring=None, n_jobs=1)
             grid.fit(data["X_train"], data["y_train"])
             model = grid.best_estimator_
         else:

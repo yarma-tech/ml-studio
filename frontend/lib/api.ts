@@ -1,7 +1,7 @@
 import type {
   DatasetMetadata, ColumnStats, DistributionData,
   TrainingConfig, TrainingResults, TrainingProgress,
-  ConfusionMatrixData, FeatureImportanceItem,
+  ConfusionMatrixData, FeatureImportanceItem, BatchPredictionResult,
 } from "./types";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
@@ -33,6 +33,18 @@ export async function getDistribution(datasetId: string, column: string) {
   return fetchJSON<DistributionData>(`/api/datasets/${datasetId}/distribution/${column}`);
 }
 
+export async function getCorrelations(datasetId: string, target: string) {
+  return fetchJSON<{ target: string; correlations: Record<string, number> }>(`/api/datasets/${datasetId}/correlations/${target}`);
+}
+
+export async function getSamples(datasetId: string) {
+  return fetchJSON<{ samples: Record<string, string[]> }>(`/api/datasets/${datasetId}/samples`);
+}
+
+export async function describeColumns(datasetId: string) {
+  return fetchJSON<{ descriptions: Record<string, string> }>(`/api/datasets/${datasetId}/describe-columns`);
+}
+
 export async function startTraining(config: TrainingConfig) {
   return fetchJSON<{ training_id: string }>("/api/training/start", {
     method: "POST",
@@ -61,4 +73,15 @@ export async function getFeatureImportance(trainingId: string, modelName?: strin
 
 export function getExportUrl(trainingId: string, modelName: string): string {
   return `${API_BASE}/api/training/${trainingId}/export/${modelName}`;
+}
+
+export async function predictBatch(trainingId: string, file: File, modelName?: string): Promise<BatchPredictionResult> {
+  const form = new FormData();
+  form.append("file", file);
+  const params = modelName ? `?model_name=${modelName}` : "";
+  return fetchJSON(`/api/training/${trainingId}/predict${params}`, { method: "POST", body: form });
+}
+
+export function getPredictionDownloadUrl(trainingId: string): string {
+  return `${API_BASE}/api/training/${trainingId}/predict/download`;
 }

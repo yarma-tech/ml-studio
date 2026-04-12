@@ -12,6 +12,12 @@ export default function TrainingProgress() {
   const { dataset, targetColumn, featureColumns, taskType, preprocessing, algorithms, crossValidationFolds, hyperparameterTuning, trainingId, setTrainingId, setStep } = useStepper();
   const [progress, setProgress] = useState<ProgressType | null>(null);
   const [launching, setLaunching] = useState(false);
+  const [completedTrainingId, setCompletedTrainingId] = useState<string | null>(null);
+
+  // Allow re-training: show the launch button if user is on step 4
+  const hasExistingTraining = !!trainingId;
+  const isTrainingInProgress = hasExistingTraining && progress?.status === "training";
+  const showLaunchButton = !isTrainingInProgress && !launching;
 
   const launch = async () => {
     if (!dataset || !targetColumn || !taskType) return;
@@ -45,11 +51,16 @@ export default function TrainingProgress() {
     return () => { disconnect(); clearInterval(interval); };
   }, [trainingId, setStep]);
 
-  if (!trainingId && !launching) {
+  if (showLaunchButton) {
     return (
       <div className="max-w-xl mx-auto text-center py-12">
         <p className="text-gray-600 mb-6">{algorithms.length} algorithme(s) sélectionné(s). Prêt à lancer l&apos;entraînement.</p>
-        <Button onClick={launch} disabled={algorithms.length === 0}>🚀 Lancer l&apos;entraînement</Button>
+        {hasExistingTraining && (
+          <p className="text-sm text-orange-500 mb-4">Un entraînement précédent existe. Cliquez pour en relancer un nouveau.</p>
+        )}
+        <Button onClick={launch} disabled={algorithms.length === 0}>
+          {hasExistingTraining ? "🔄 Relancer un entraînement" : "🚀 Lancer l\u2019entraînement"}
+        </Button>
       </div>
     );
   }

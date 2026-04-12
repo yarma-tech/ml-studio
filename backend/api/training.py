@@ -1,15 +1,15 @@
 import uuid
-import asyncio
 import joblib
 import io
-from fastapi import APIRouter, HTTPException, BackgroundTasks
+from fastapi import APIRouter, HTTPException, BackgroundTasks, UploadFile, File
 from fastapi.responses import StreamingResponse
+import numpy as np
 from models.schemas import TrainingConfig
 from storage.file_manager import get_upload_path, save_model, get_model_path
 from ml.preprocessing import preprocess_data
 from ml.training import train_models
 from ml.evaluation import evaluate_model, get_confusion_matrix, get_feature_importance
-from api.websocket import broadcast, set_status, get_status
+from api.websocket import set_status, get_status
 import pandas as pd
 
 router = APIRouter(prefix="/api/training")
@@ -22,7 +22,7 @@ def _read_dataframe(path) -> pd.DataFrame:
         return pd.read_csv(path)
     return pd.read_excel(path)
 
-async def _run_training(training_id: str, config: TrainingConfig):
+def _run_training(training_id: str, config: TrainingConfig):
     try:
         set_status(training_id, {"training_id": training_id, "status": "training", "progress": 0})
 
@@ -38,18 +38,13 @@ async def _run_training(training_id: str, config: TrainingConfig):
 
         data = preprocess_data(df, target=config.target_column, features=config.feature_columns, config=prep_config)
 
-        loop = asyncio.get_event_loop()
-
         def progress_callback(model_name, progress):
-            asyncio.run_coroutine_threadsafe(
-                broadcast(training_id, {
-                    "training_id": training_id,
-                    "status": "training",
-                    "current_model": model_name,
-                    "progress": progress,
-                }),
-                loop,
-            )
+            set_status(training_id, {
+                "training_id": training_id,
+                "status": "training",
+                "current_model": model_name,
+                "progress": progress,
+            })
 
         trained = train_models(
             data, task_type=config.task_type, algorithms=config.algorithms,
@@ -91,11 +86,9 @@ async def _run_training(training_id: str, config: TrainingConfig):
         }
 
         set_status(training_id, {"training_id": training_id, "status": "complete", "progress": 100})
-        await broadcast(training_id, {"training_id": training_id, "status": "complete", "progress": 100})
 
     except Exception as e:
         set_status(training_id, {"training_id": training_id, "status": "error", "message": str(e)})
-        await broadcast(training_id, {"training_id": training_id, "status": "error", "message": str(e)})
 
 @router.post("/start")
 async def start_training(config: TrainingConfig, background_tasks: BackgroundTasks):
@@ -143,6 +136,61 @@ def feature_importance_route(training_id: str, model_name: str = None):
     model = r["trained_models"][name]["model"]
     return get_feature_importance(model, r["data"]["X_test"], r["data"]["y_test"], r["data"]["feature_names"])
 
+@router.get("/{training_id}/regression-curves")
+def regression_curves_route(training_id: str, feature: str = None):
+    """Return data for regression curve visualization.
+    For each model, returns predictions sorted by a chosen feature.
+    Also returns the actual data points for scatter plot.
+    """
+    if training_id not in _results:
+        raise HTTPException(status_code=404, detail={"error": "not_found", "message": "Résultats introuvables."})
+    r = _results[training_id]
+    data = r["data"]
+    X_test = data["X_test"]
+    y_test = data["y_test"]
+    feature_names = data["feature_names"]
+
+    # Find available original numeric features (before encoding)
+    # Original features are those without underscore prefixes from one-hot encoding
+    original_features = [f for f in feature_names if "_" not in f or f in X_test.columns]
+    # Fallback: use all feature names
+    if not original_features:
+        original_features = feature_names
+
+    # Pick the feature to plot on X axis
+    chosen_feature = feature if feature and feature in X_test.columns else original_features[0] if original_features else feature_names[0]
+
+    # Get feature values for X axis
+    feature_values = X_test[chosen_feature].tolist()
+    actual_values = y_test.tolist()
+
+    # Sort indices by feature value for clean line plots
+    sorted_indices = sorted(range(len(feature_values)), key=lambda i: feature_values[i])
+
+    # Build scatter data (actual points)
+    scatter = [
+        {"x": float(feature_values[i]), "y": float(actual_values[i])}
+        for i in sorted_indices
+    ]
+
+    # Build prediction curves for each model
+    curves = {}
+    for name, result in r["trained_models"].items():
+        model = result["model"]
+        y_pred = model.predict(X_test)
+        curves[name] = [
+            {"x": float(feature_values[i]), "y": float(y_pred[i])}
+            for i in sorted_indices
+        ]
+
+    return {
+        "feature": chosen_feature,
+        "available_features": [f for f in X_test.columns if not any(f.startswith(p + "_") for p in feature_names)],
+        "scatter": scatter,
+        "curves": curves,
+    }
+
+
 @router.get("/{training_id}/predictions")
 def predictions_route(training_id: str, model_name: str = None):
     if training_id not in _results:
@@ -153,6 +201,108 @@ def predictions_route(training_id: str, model_name: str = None):
     y_pred = model.predict(r["data"]["X_test"])
     y_actual = r["data"]["y_test"].tolist()
     return {"predictions": [{"actual": float(a), "predicted": float(p)} for a, p in zip(y_actual, y_pred)]}
+
+@router.post("/{training_id}/predict")
+async def predict_batch(training_id: str, file: UploadFile = File(...), model_name: str = None):
+    if training_id not in _results:
+        raise HTTPException(status_code=404, detail={"error": "not_found", "message": "Résultats introuvables."})
+
+    r = _results[training_id]
+    name = model_name or next((m["name"] for m in r["models"] if m["is_best"]), r["models"][0]["name"])
+    model = r["trained_models"][name]["model"]
+    data = r["data"]
+    feature_names = data["feature_names"]
+    scaler = data.get("scaler")
+    target_encoder = r.get("target_encoder")
+
+    content = await file.read()
+    try:
+        new_df = pd.read_csv(io.BytesIO(content))
+    except Exception:
+        raise HTTPException(status_code=400, detail={"error": "invalid_file", "message": "Fichier CSV invalide."})
+
+    original_df = new_df.copy()
+
+    # Determine which raw columns are expected (before one-hot encoding)
+    raw_columns = set(new_df.columns)
+    expected_raw = set()
+    for fname in feature_names:
+        parts = fname.rsplit("_", 1)
+        if len(parts) == 2 and parts[0] in raw_columns:
+            expected_raw.add(parts[0])
+        elif fname in raw_columns:
+            expected_raw.add(fname)
+        else:
+            base = parts[0] if len(parts) == 2 else fname
+            expected_raw.add(base)
+
+    missing = expected_raw - raw_columns
+    if missing:
+        raise HTTPException(status_code=400, detail={
+            "error": "missing_columns",
+            "message": f"Colonnes manquantes : {', '.join(sorted(missing))}",
+        })
+
+    numeric_cols = [c for c in new_df.select_dtypes(include=[np.number]).columns if c in expected_raw]
+    categorical_cols = [c for c in new_df.select_dtypes(exclude=[np.number]).columns if c in expected_raw]
+
+    for col in numeric_cols:
+        if new_df[col].isna().any():
+            new_df[col] = new_df[col].fillna(new_df[col].mean())
+    for col in categorical_cols:
+        if new_df[col].isna().any():
+            mode = new_df[col].mode()
+            new_df[col] = new_df[col].fillna(mode[0] if not mode.empty else "unknown")
+
+    if categorical_cols:
+        new_df = pd.get_dummies(new_df, columns=categorical_cols, prefix=categorical_cols)
+
+    new_df = new_df.reindex(columns=feature_names, fill_value=0)
+
+    if scaler is not None:
+        scaler_cols = list(scaler.feature_names_in_)
+        new_df[scaler_cols] = scaler.transform(new_df[scaler_cols])
+
+    predictions = model.predict(new_df)
+
+    if target_encoder is not None:
+        predictions = target_encoder.inverse_transform(predictions.astype(int))
+
+    original_df["prediction"] = predictions
+    columns = list(original_df.columns)
+    rows = original_df.to_dict(orient="records")
+
+    r["last_predictions"] = {"model_name": name, "df": original_df}
+
+    return {
+        "model_name": name,
+        "prediction_column": "prediction",
+        "total_rows": len(rows),
+        "columns": columns,
+        "rows": rows,
+    }
+
+
+@router.get("/{training_id}/predict/download")
+def download_predictions(training_id: str):
+    if training_id not in _results:
+        raise HTTPException(status_code=404, detail={"error": "not_found", "message": "Résultats introuvables."})
+
+    r = _results[training_id]
+    if "last_predictions" not in r:
+        raise HTTPException(status_code=404, detail={"error": "no_predictions", "message": "Aucune prédiction disponible."})
+
+    df = r["last_predictions"]["df"]
+    buffer = io.StringIO()
+    df.to_csv(buffer, index=False)
+    buffer.seek(0)
+
+    return StreamingResponse(
+        io.BytesIO(buffer.getvalue().encode()),
+        media_type="text/csv",
+        headers={"Content-Disposition": "attachment; filename=predictions.csv"},
+    )
+
 
 @router.get("/{training_id}/export/{model_name}")
 def export_model(training_id: str, model_name: str):

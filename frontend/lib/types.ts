@@ -74,3 +74,11 @@ export interface FeatureImportanceItem {
   feature: string;
   importance: number;
 }
+
+export interface BatchPredictionResult {
+  model_name: string;
+  prediction_column: string;
+  total_rows: number;
+  columns: string[];
+  rows: Record<string, unknown>[];
+}

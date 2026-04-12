@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from "react";
 import type { DatasetMetadata, PreprocessingConfig } from "@/lib/types";
 
 interface StepperState {
@@ -78,21 +78,25 @@ export function StepperProvider({ children }: { children: ReactNode }) {
     window.history.replaceState({}, "", url);
   }, [state]);
 
-  const update = (partial: Partial<StepperState>) => setState((prev) => ({ ...prev, ...partial }));
+  const update = useCallback((partial: Partial<StepperState>) => setState((prev) => ({ ...prev, ...partial })), []);
+
+  const setStep = useCallback((step: number) => update({ currentStep: step }), [update]);
+  const setDataset = useCallback((dataset: DatasetMetadata) => update({ dataset, currentStep: 1 }), [update]);
+  const setTargetColumn = useCallback((column: string) => update({ targetColumn: column }), [update]);
+  const setFeatureColumns = useCallback((columns: string[]) => update({ featureColumns: columns }), [update]);
+  const setTaskType = useCallback((type: "classification" | "regression") => update({ taskType: type }), [update]);
+  const setPreprocessing = useCallback((config: PreprocessingConfig) => update({ preprocessing: config }), [update]);
+  const setAlgorithms = useCallback((algos: string[]) => update({ algorithms: algos }), [update]);
+  const setCrossValidationFolds = useCallback((folds: number) => update({ crossValidationFolds: folds }), [update]);
+  const setHyperparameterTuning = useCallback((enabled: boolean) => update({ hyperparameterTuning: enabled }), [update]);
+  const setTrainingId = useCallback((id: string) => update({ trainingId: id }), [update]);
+  const reset = useCallback(() => { setState(defaultState); localStorage.removeItem(STORAGE_KEY); }, []);
 
   const value: StepperContextType = {
     ...state,
-    setStep: (step) => update({ currentStep: step }),
-    setDataset: (dataset) => update({ dataset, currentStep: 1 }),
-    setTargetColumn: (column) => update({ targetColumn: column }),
-    setFeatureColumns: (columns) => update({ featureColumns: columns }),
-    setTaskType: (type) => update({ taskType: type }),
-    setPreprocessing: (config) => update({ preprocessing: config }),
-    setAlgorithms: (algos) => update({ algorithms: algos }),
-    setCrossValidationFolds: (folds) => update({ crossValidationFolds: folds }),
-    setHyperparameterTuning: (enabled) => update({ hyperparameterTuning: enabled }),
-    setTrainingId: (id) => update({ trainingId: id }),
-    reset: () => { setState(defaultState); localStorage.removeItem(STORAGE_KEY); },
+    setStep, setDataset, setTargetColumn, setFeatureColumns, setTaskType,
+    setPreprocessing, setAlgorithms, setCrossValidationFolds, setHyperparameterTuning,
+    setTrainingId, reset,
   };
 
   return <StepperContext.Provider value={value}>{children}</StepperContext.Provider>;

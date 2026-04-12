@@ -16,6 +16,7 @@ import ConfusionMatrix from "@/components/results/ConfusionMatrix";
 import PredictionsChart from "@/components/results/PredictionsChart";
 import FeatureImportance from "@/components/results/FeatureImportance";
 import ModelExport from "@/components/results/ModelExport";
+import BatchPredict from "@/components/results/BatchPredict";
 import Button from "@/components/ui/Button";
 import { getTrainingResults } from "@/lib/api";
 import type { TrainingResults } from "@/lib/types";
@@ -52,9 +53,10 @@ function StudioContent() {
             <div className="space-y-6">
               <ResultsTable models={results.models} taskType={results.task_type} />
               {results.task_type === "classification" && trainingId && <ConfusionMatrix trainingId={trainingId} />}
-              {results.task_type === "regression" && trainingId && <PredictionsChart trainingId={trainingId} />}
+              {results.task_type === "regression" && trainingId && <PredictionsChart trainingId={trainingId} modelNames={results.models.map((m) => m.name)} />}
               {trainingId && <FeatureImportance trainingId={trainingId} />}
               {trainingId && <ModelExport trainingId={trainingId} models={results.models} />}
+              {trainingId && <BatchPredict trainingId={trainingId} models={results.models} />}
             </div>
           )}
         </div>
