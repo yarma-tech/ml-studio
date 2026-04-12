@@ -1,0 +1,126 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic:
+      - button "Allez au contenu principal"
+    - generic [ref=e5]:
+      - generic [ref=e7]:
+        - img "OVHcloud" [ref=e8] [cursor=pointer]:
+          - img "icon_logo_ovh" [ref=e222]
+        - menubar "Menu de mes services" [ref=e19]:
+          - menu [ref=e20]:
+            - listitem [ref=e21]
+            - menuitem [ref=e225]:
+              - button "Bare Metal Cloud" [ref=e24] [cursor=pointer]:
+                - img [ref=e27]
+            - menuitem [ref=e226]:
+              - button "Hosted Private Cloud" [ref=e33] [cursor=pointer]:
+                - img [ref=e36]
+            - menuitem [ref=e227]:
+              - button "Network" [ref=e42] [cursor=pointer]:
+                - img [ref=e45]
+            - menuitem [ref=e228]:
+              - button "Public Cloud" [ref=e63] [cursor=pointer]:
+                - img [ref=e66]
+            - menuitem [ref=e229]:
+              - button "Sunrise" [ref=e74] [cursor=pointer]:
+                - img [ref=e77]
+            - menuitem [ref=e230]:
+              - button "Identité, Sécurité & Opérations" [ref=e83] [cursor=pointer]:
+                - img [ref=e86]
+            - menuitem [ref=e231]:
+              - button "Télécom" [ref=e93] [cursor=pointer]:
+                - img [ref=e96]
+            - menuitem [ref=e232]:
+              - button "Web Cloud" [ref=e102] [cursor=pointer]:
+                - img [ref=e105]
+          - link "Ajouter un service" [ref=e112]:
+            - /url: https://manager.eu.ovhcloud.com/#/catalog/
+            - link [ref=e233] [cursor=pointer]:
+              - /url: https://manager.eu.ovhcloud.com/#/catalog/
+              - img [ref=e118]
+        - button [ref=e235] [cursor=pointer]:
+          - generic [ref=e152]: 
+          - generic [ref=e153]: 
+      - generic [ref=e236]:
+        - button [ref=e237]
+        - text: 
+        - img "Télécom" [ref=e239]:
+          - img [ref=e240]
+        - menu "Télécom" [ref=e242]:
+          - listitem [ref=e243]:
+            - heading "Télécom" [level=2] [ref=e244]
+          - listitem [ref=e245]:
+            - group "Accès Internet" [ref=e246]:
+              - listitem [ref=e247]:
+                - heading "Accès Internet" [level=2] [ref=e248]
+              - menuitem "Offres Internet" [ref=e249]:
+                - link "Offres Internet" [ref=e250] [cursor=pointer]:
+                  - /url: https://manager.eu.ovhcloud.com/#/telecom/pack
+              - menuitem "OverTheBox" [ref=e251]:
+                - link "OverTheBox" [ref=e252] [cursor=pointer]:
+                  - /url: https://manager.eu.ovhcloud.com/#/telecom/overTheBox
+          - listitem [ref=e253]:
+            - group "Téléphonie" [ref=e254]:
+              - listitem [ref=e255]:
+                - heading "Téléphonie" [level=2] [ref=e256]
+              - menuitem "VoIP & Fax" [ref=e257]:
+                - link "VoIP & Fax" [ref=e258] [cursor=pointer]:
+                  - /url: https://manager.eu.ovhcloud.com/#/telecom/telephony
+              - menuitem "SMS" [ref=e259]:
+                - link "SMS" [ref=e260] [cursor=pointer]:
+                  - /url: https://manager.eu.ovhcloud.com/#/telecom/sms
+              - menuitem "Fax" [ref=e261]:
+                - link "Fax" [ref=e262] [cursor=pointer]:
+                  - /url: https://manager.eu.ovhcloud.com/#/telecom/freefax
+          - listitem [ref=e263]:
+            - link "Opérations" [ref=e265] [cursor=pointer]:
+              - /url: https://manager.eu.ovhcloud.com/#/telecom/task
+      - menu [ref=e267]:
+        - generic "Liens utiles" [ref=e269]:
+          - button [ref=e270] [cursor=pointer]
+        - generic:
+          - generic: Centre d'aide
+          - generic: Mes demandes d'assistance
+          - generic: Roadmap & Changelog
+          - generic: Marketplace
+          - generic: Etat du réseau et incidents
+          - generic: Créer un ticket
+          - generic: Live Chat
+          - generic: Assistant IA
+          - generic: Mon bilan carbone
+    - generic [ref=e154]:
+      - generic [ref=e157]:
+        - generic [ref=e159]:
+          - radiogroup [ref=e160]:
+            - generic:
+              - generic [ref=e162]:
+                - radio "Navigation classique" [ref=e163]
+                - generic [ref=e167]:
+                  - generic: Navigation classique
+              - generic [ref=e169]:
+                - radio "Navigation beta" [checked] [ref=e170]
+                - generic [ref=e174]:
+                  - generic: Navigation beta
+          - link "Découvrez notre nouveau Manager Beta" [ref=e176] [cursor=pointer]:
+            - /url: /beta/#/
+            - generic [ref=e179]: Découvrez notre nouveau Manager Beta
+        - button "Changer la langue de l'interface" [ref=e182]:
+          - generic [ref=e183]:
+            - generic [ref=e184]: Français
+            - generic [ref=e185]: 
+        - link "OVHcloud Shell" [ref=e187] [cursor=pointer]:
+          - /url: https://manager.eu.ovhcloud.com/#/cloud-shell
+          - img [ref=e188]
+        - button "Notifications" [ref=e191]
+        - generic [ref=e194]:
+          - button "Gérer mon compte" [ref=e195]:
+            - button "YARMA VIDEOS" [ref=e196] [cursor=pointer]:
+              - generic [ref=e202]: YARMA VIDEOS
+          - generic:
+            - generic: Administrateur
+            - generic: Standard
+      - iframe [ref=e205]:
+        
+  - button "Ouvrir l'assistant IA" [ref=e216] [cursor=pointer]:
+    - img [ref=e217]
+    - generic [ref=e221]: Ouvrir l'assistant IA

@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - progressbar [ref=e6]
+      - main [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e17]:
+            - generic [ref=e18]:
+              - img [ref=e20]
+              - generic [ref=e25]: Sign in with Google
+            - img "Vercel" [ref=e26]
+          - generic [ref=e27]:
+            - heading "Choose an account" [level=1] [ref=e28]
+            - generic [ref=e30]:
+              - text: to continue to
+              - button "Vercel" [ref=e31] [cursor=pointer]
+        - generic [ref=e34]:
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - link "Yannick Maillard yarma@yarmavideos.com" [ref=e44] [cursor=pointer]:
+                - generic [ref=e48]:
+                  - generic [ref=e49]: Yannick Maillard
+                  - generic [ref=e50]: yarma@yarmavideos.com
+            - listitem [ref=e51]:
+              - link "Association Média KARATA contact@karata.fr" [ref=e52] [cursor=pointer]:
+                - generic [ref=e56]:
+                  - generic [ref=e57]: Association Média KARATA
+                  - generic [ref=e58]: contact@karata.fr
+            - listitem [ref=e59]:
+              - link "Yannick Maillard yannick.maillard@gmail.com" [ref=e60] [cursor=pointer]:
+                - generic [ref=e64]:
+                  - generic [ref=e65]: Yannick Maillard
+                  - generic [ref=e66]: yannick.maillard@gmail.com
+            - listitem [ref=e67]:
+              - link "Use another account" [ref=e68] [cursor=pointer]:
+                - generic [ref=e69]:
+                  - img [ref=e71]
+                  - generic [ref=e74]: Use another account
+          - generic [ref=e77]:
+            - text: Before using this app, you can review Vercel’s
+            - link "privacy policy" [ref=e78] [cursor=pointer]:
+              - /url: https://vercel.com/legal/privacy-policy
+            - text: and
+            - link "terms of service" [ref=e79] [cursor=pointer]:
+              - /url: https://vercel.com/legal/terms
+            - text: .
+    - contentinfo [ref=e83]:
+      - combobox "Change language English (United States)" [ref=e87] [cursor=pointer]:
+        - generic:
+          - generic: English (United States)
+        - generic:
+          - img
+      - list [ref=e89]:
+        - listitem [ref=e90]:
+          - link "Help" [ref=e91] [cursor=pointer]:
+            - /url: https://support.google.com/accounts?hl=en&p=account_iph
+        - listitem [ref=e92]:
+          - link "Privacy" [ref=e93] [cursor=pointer]:
+            - /url: https://accounts.google.com/TOS?loc=CA&hl=en&privacy=true
+        - listitem [ref=e94]:
+          - link "Terms" [ref=e95] [cursor=pointer]:
+            - /url: https://accounts.google.com/TOS?loc=CA&hl=en
+  - iframe [ref=e96]:
+    

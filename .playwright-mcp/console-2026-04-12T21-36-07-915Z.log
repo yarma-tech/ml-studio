@@ -1,0 +1,84 @@
+[    4686ms] Error: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at rD (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:42472)
+    at oK (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:92518)
+    at uS (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:123605)
+    at https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:123450
+    at uw (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:123458)
+    at uc (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:118833)
+    at uZ (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:141971)
+    at MessagePort.N (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:186982)
+[    4618ms] [LOG] Init federation for tracking API @ https://www.ovhcloud.com/modules/custom/ovh_sentry/dist/sentry.min.js?v=1.0.3:4
+[    4764ms] Error: Cannot find './session-handler' module
+    at https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/js/webcallback-federation.min.js?v=1.0.13:75:15
+[    6397ms] TypeError: Cannot read properties of undefined (reading 'conversion_id')
+    at https://analytics.ovh.com/ovh/ovh_tags.js:472:397
+    at Array.forEach (<anonymous>)
+    at window._linkedin_data_partner_ids.ovh_lintrk (https://analytics.ovh.com/ovh/ovh_tags.js:472:239)
+    at Function.executeTag688_3810_2 (https://analytics.ovh.com/ovh/ovh_tags.js:478:273)
+    at Array.<anonymous> (https://analytics.ovh.com/ovh/ovh_tags.js:11:102027)
+    at tC.event.giveConsent (https://analytics.ovh.com/ovh/ovh_delta.js:11:135697)
+    at Array.<anonymous> (https://analytics.ovh.com/ovh/ovh_abt.js:11:91743)
+    at Function.each (https://analytics.ovh.com/ovh/ovh_abt.js:11:2932)
+    at Object.load (https://analytics.ovh.com/ovh/ovh_abt.js:11:91616)
+    at Object.reload (https://analytics.ovh.com/ovh/ovh_abt.js:11:91863)
+    at String.<anonymous> (https://analytics.ovh.com/ovh/ovh_delta.js:11:150615)
+    at Function.each (https://analytics.ovh.com/ovh/ovh_abt.js:11:2978)
+    at Object.reload (https://analytics.ovh.com/ovh/ovh_delta.js:11:150475)
+    at tc_reloadContainerPrivacy (https://analytics.ovh.com/ovh/ovh_delta.js:881:202)
+    at https://analytics.ovh.com/ovh/ovh_delta.js:882:23
+    at r (https://www.ovhcloud.com/modules/custom/ovh_sentry/dist/sentry.min.js?v=1.0.3:23:18376)
+[    9057ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://auth.ca.ovhcloud.com/signin/?onsuccess=https%3A//manager.ca.ovhcloud.com&ovhSubsidiary=CA:0
+[    9148ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://auth.ca.ovhcloud.com/favicon.ico:0
+[   43572ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://auth.ca.ovhcloud.com/signin/?account=my11051-ovh&ovhSubsidiary=CA&error=invalid_account_or_password&onsuccess=https%3A%2F%2Fmanager.ca.ovhcloud.com:0
+[   74919ms] [LOG] Init federation for tracking API @ https://www.ovhcloud.com/modules/custom/ovh_sentry/dist/sentry.min.js?v=1.0.3:4
+[   74966ms] Error: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at rD (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:42472)
+    at oK (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:92518)
+    at uS (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:123605)
+    at https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:123450
+    at uw (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:123458)
+    at uc (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:118833)
+    at uZ (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:141971)
+    at MessagePort.N (https://www.ovhcloud.com/_next-menu/_next/static/chunks/framework-d7de93249215fb06.js:1:186982)
+[   75047ms] Error: Cannot find './session-handler' module
+    at https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/js/webcallback-federation.min.js?v=1.0.13:75:15
+[   75367ms] [LOG] Error: No url matching found for the content on sub en-ca
+    at CountriesService.getCurrentPageRedirectionUrl (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:174:13)
+    at mapBillingToSuggestion (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:142:28)
+    at Array.map (<anonymous>)
+    at CountriesService.getSuggestions (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:167:77)
+    at RedirectionBannerController.initialize (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:238:49) @ https://www.ovhcloud.com/modules/custom/ovh_sentry/dist/sentry.min.js?v=1.0.3:4
+[   75368ms] [LOG] Error: No url matching found for the content on sub fr-ca
+    at CountriesService.getCurrentPageRedirectionUrl (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:174:13)
+    at mapBillingToSuggestion (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:142:28)
+    at Array.map (<anonymous>)
+    at CountriesService.getSuggestions (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:167:77)
+    at RedirectionBannerController.initialize (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:238:49) @ https://www.ovhcloud.com/modules/custom/ovh_sentry/dist/sentry.min.js?v=1.0.3:4
+[   75368ms] [LOG] Error: No url matching found for the content on sub en-us
+    at CountriesService.getCurrentPageRedirectionUrl (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:174:13)
+    at mapBillingToSuggestion (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:142:28)
+    at Array.map (<anonymous>)
+    at CountriesService.getSuggestions (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:167:77)
+    at RedirectionBannerController.initialize (https://www.ovhcloud.com/7af16cdb/contrib/ovh_theme_patternlab/dist/odss-redirections-banner/redirections-banner.min.js?v=1.0.3:238:49) @ https://www.ovhcloud.com/modules/custom/ovh_sentry/dist/sentry.min.js?v=1.0.3:4
+[   78996ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://auth.eu.ovhcloud.com/signin/?onsuccess=https%3A//manager.eu.ovhcloud.com&ovhSubsidiary=FR&_gl=1*1q9bigd*_gcl_au*NzU4NjI4NTkzLjE3NzYwMjk4NDM.:0
+[   79387ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://auth.eu.ovhcloud.com/favicon.ico:0
+[  107531ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://manager.eu.ovhcloud.com/translations/communications/Messages_fr_FR.json:0
+[  107563ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=classic] connectedCallback @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107563ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=classic] checked changed. update child {checked: false} @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107564ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=classic] disabled changed. update child {disabled: false} @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107564ms] [LOG] %cODS %cOdsRadioGroupController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio-group=ods-radio-group-3] registerRadio {radio: osds-radio} @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107564ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=classic] updateState  classic @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107565ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=beta] connectedCallback @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107565ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=beta] checked changed. update child {checked: true} @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107565ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=beta] disabled changed. update child {disabled: false} @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107565ms] [LOG] %cODS %cOdsRadioGroupController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio-group=ods-radio-group-3] registerRadio {radio: osds-radio} @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107566ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=beta] updateState  beta @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107569ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=classic] checked changed. update child {checked: false} @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107569ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=classic] disabled changed. update child {disabled: false} @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107569ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=beta] checked changed. update child {checked: true} @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107569ms] [LOG] %cODS %cOdsRadioController color: white;background:#004fd6;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 5px 0px 0px 5px color: black;background:#d4e0e7;font-weight: bold; font-size:10px; padding:2px 6px; border-radius: 0px 5px 5px 0px [radio=beta] disabled changed. update child {disabled: false} @ https://manager.eu.ovhcloud.com/assets/index-D4IKmJgE.js:49
+[  107768ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ about:srcdoc:0
+[  108180ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://manager.eu.ovhcloud.com/engine/2api/banner?locale=fr_FR:0
+[  238433ms] [LOG] WARNING: Tried to load AngularJS more than once. @ https://manager.eu.ovhcloud.com/telecom/41854.ba1c402bb1302384e026.bundle.js:1
+[  238510ms] [LOG] WARNING: Tried to load AngularJS more than once. @ https://manager.eu.ovhcloud.com/telecom/41854.ba1c402bb1302384e026.bundle.js:1
+[  239160ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://manager.eu.ovhcloud.com/engine/apiv6/me/preferences/manager/ACCOUNT_BETA_FEATURES:0

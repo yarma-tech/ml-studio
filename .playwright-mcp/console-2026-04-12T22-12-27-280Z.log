@@ -1,0 +1,37 @@
+[     385ms] [LOG] %c
+▲
+
+__  __                                     _            __
+\ \/ /___  __  __   _________ _____       (_)_  _______/ /_
+ \  / __ \/ / / /  / ___/ __ `/ __ \     / / / / / ___/ __/
+ / / /_/ / /_/ /  / /__/ /_/ / / / /    / / /_/ (__  ) /_
+/_/\____/\__,_/   \___/\__,_/_/ /_/  __/ /\__,_/____/\__/
+         __    _          __  __    /___/
+   _____/ /_  (_)___     / /_/ /_  (_)___  ____ ______
+  / ___/ __ \/ / __ \   / __/ __ \/ / __ \/ __ `/ ___/
+ (__  ) / / / / /_/ /  / /_/ / / / / / / / /_/ (__  )
+/____/_/ /_/_/ .___/   \__/_/ /_/_/_/ /_/\__, /____/
+            /_/                         /____/
+  
+
+Hello!
+
+- Open Source https://vercel.com/oss
+- Careers https://vercel.com/careers
+- Status https://vercel-status.com
+
+ font-family: "Geist Mono", monospace; white-space: pre; line-height: 1; @ https://vercel.com/_next/static/chunks/3vt9z9-00w7jo.js?dpl=dpl_C2m9dLKfjeKz6MeHtyZmvJAML7Dq:72
+[     791ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://accounts.google.com/gsi/client:84
+[     829ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://vercel.com/api/jwt:0
+[     896ms] [WARNING] Deprecated API for given entry type. @ https://vercel.com/_next/static/chunks/0835ycci1b4sv.js?dpl=dpl_C2m9dLKfjeKz6MeHtyZmvJAML7Dq:18
+[    4352ms] [WARNING] The resource https://vercel.com/_next/static/media/stripe-dark.16ozjth2vgb_3.svg?dpl=dpl_C2m9dLKfjeKz6MeHtyZmvJAML7Dq was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://vercel.com/login?next=%2Fyarma-tech%2Fml-studio-for-student%2Fsettings%2Fgeneral:0
+[    4352ms] [WARNING] The resource https://vercel.com/_next/static/media/adobe-light.406_7oryl71va.svg?dpl=dpl_C2m9dLKfjeKz6MeHtyZmvJAML7Dq was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://vercel.com/login?next=%2Fyarma-tech%2Fml-studio-for-student%2Fsettings%2Fgeneral:0
+[    4352ms] [WARNING] The resource https://vercel.com/_next/static/chunks/1mkn1n4cf7-_i.css?dpl=dpl_C2m9dLKfjeKz6MeHtyZmvJAML7Dq was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://vercel.com/login?next=%2Fyarma-tech%2Fml-studio-for-student%2Fsettings%2Fgeneral:0
+[    4352ms] [WARNING] The resource https://vercel.com/_next/static/media/ebay-dark.34mho2a18qqlt.svg?dpl=dpl_C2m9dLKfjeKz6MeHtyZmvJAML7Dq was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://vercel.com/login?next=%2Fyarma-tech%2Fml-studio-for-student%2Fsettings%2Fgeneral:0
+[    4352ms] [WARNING] The resource https://vercel.com/_next/static/media/ebay-light.3ft_ki8203ov0.svg?dpl=dpl_C2m9dLKfjeKz6MeHtyZmvJAML7Dq was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://vercel.com/login?next=%2Fyarma-tech%2Fml-studio-for-student%2Fsettings%2Fgeneral:0
+[    4352ms] [WARNING] The resource https://vercel.com/_next/static/media/stripe-light.2l_1jctpe6k_4.svg?dpl=dpl_C2m9dLKfjeKz6MeHtyZmvJAML7Dq was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://vercel.com/login?next=%2Fyarma-tech%2Fml-studio-for-student%2Fsettings%2Fgeneral:0
+[   14304ms] [ERROR] The request has been aborted. @ https://vercel.com/login?next=%2Fyarma-tech%2Fml-studio-for-student%2Fsettings%2Fgeneral:0
+[   14312ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with AbortError: signal is aborted without reason @ https://vercel.com/_next/static/chunks/1w_sinsr2srgu.js?dpl=dpl_C2m9dLKfjeKz6MeHtyZmvJAML7Dq:6
+[   14824ms] [LOG] %c%s color: red; background: yellow; font-size: 24px; WARNING! @ https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.x3DljreikNs.es5.O/am=Kf8GAABCEUgG0P__HzIAIACCaOB6FoAmEBkAAAAAAAAAALBAAAAaAQ/d=1/excm=_b,_tp,accountchooserview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlFz4yRtS26sd_9v5zbOAssIqe41tw/dti=1/m=_b,_tp:468
+[   14824ms] [LOG] %c%s font-size: 18px; Using this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.
+Do not enter or paste code that you do not understand. @ https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.x3DljreikNs.es5.O/am=Kf8GAABCEUgG0P__HzIAIACCaOB6FoAmEBkAAAAAAAAAALBAAAAaAQ/d=1/excm=_b,_tp,accountchooserview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlFz4yRtS26sd_9v5zbOAssIqe41tw/dti=1/m=_b,_tp:468
