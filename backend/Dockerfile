@@ -1,9 +1,10 @@
-FROM python:3.12
+FROM python:3.12-slim
 
 WORKDIR /app
 
+ARG CACHEBUST=3
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt && pip install --no-cache-dir setuptools
+RUN pip install --no-cache-dir setuptools>=70.0.0 && pip install --no-cache-dir -r requirements.txt && python -c "import pkg_resources; print('setuptools OK')"
 
 COPY . .
 
