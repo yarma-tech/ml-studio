@@ -1,0 +1,144 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - heading "ML Studio" [level=1] [ref=e4]
+    - paragraph [ref=e5]: Entraînez vos modèles en quelques clics
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "📁 Charger" [ref=e8] [cursor=pointer]:
+          - generic [ref=e9]: 📁
+          - generic [ref=e10]: Charger
+        - generic [ref=e11]: →
+      - generic [ref=e12]:
+        - button "🔍 Explorer" [ref=e13] [cursor=pointer]:
+          - generic [ref=e14]: 🔍
+          - generic [ref=e15]: Explorer
+        - generic [ref=e16]: →
+      - generic [ref=e17]:
+        - button "🎯 Cible" [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]: 🎯
+          - generic [ref=e20]: Cible
+        - generic [ref=e21]: →
+      - generic [ref=e22]:
+        - button "⚙️ Préparer" [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]: ⚙️
+          - generic [ref=e25]: Préparer
+        - generic [ref=e26]: →
+      - generic [ref=e27]:
+        - button "🚀 Entraîner" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: 🚀
+          - generic [ref=e30]: Entraîner
+        - generic [ref=e31]: →
+      - button "📊 Résultats" [ref=e33]:
+        - generic [ref=e34]: 📊
+        - generic [ref=e35]: Résultats
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: Comparaison des modèles
+          - generic [ref=e41]:
+            - table [ref=e43]:
+              - rowgroup [ref=e44]:
+                - row "Modèle % Erreur Précision globale Precision Rappel F1-Score" [ref=e45]:
+                  - columnheader "Modèle" [ref=e46]
+                  - columnheader "% Erreur" [ref=e47]
+                  - columnheader "Précision globale" [ref=e48]
+                  - columnheader "Precision" [ref=e49]
+                  - columnheader "Rappel" [ref=e50]
+                  - columnheader "F1-Score" [ref=e51]
+              - rowgroup [ref=e52]:
+                - row "🏆 random forest 66.7% 0.3333 0.3333 0.3333 0.3333" [ref=e53]:
+                  - cell "🏆 random forest" [ref=e54]
+                  - cell "66.7%" [ref=e55]
+                  - cell "0.3333" [ref=e56]
+                  - cell "0.3333" [ref=e57]
+                  - cell "0.3333" [ref=e58]
+                  - cell "0.3333" [ref=e59]
+                - row "logistic regression 66.7% 0.3333 0.3333 0.3333 0.3333" [ref=e60]:
+                  - cell "logistic regression" [ref=e61]
+                  - cell "66.7%" [ref=e62]
+                  - cell "0.3333" [ref=e63]
+                  - cell "0.3333" [ref=e64]
+                  - cell "0.3333" [ref=e65]
+                  - cell "0.3333" [ref=e66]
+                - row "gradient boosting 66.7% 0.3333 0.1111 0.3333 0.1667" [ref=e67]:
+                  - cell "gradient boosting" [ref=e68]
+                  - cell "66.7%" [ref=e69]
+                  - cell "0.3333" [ref=e70]
+                  - cell "0.1111" [ref=e71]
+                  - cell "0.3333" [ref=e72]
+                  - cell "0.1667" [ref=e73]
+            - generic [ref=e74]:
+              - generic [ref=e75]: "🏆 Meilleur modèle : random forest"
+              - text: — Taux d'erreur de 66.7% (33.3% de prédictions correctes)
+        - generic [ref=e76]:
+          - generic [ref=e77]: Lexique des métriques
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - generic [ref=e81]: Précision globale
+              - paragraph [ref=e82]: Pourcentage de prédictions correctes parmi toutes les prédictions.
+            - generic [ref=e83]:
+              - generic [ref=e84]: Precision
+              - paragraph [ref=e85]: Parmi les prédictions positives, combien sont réellement positives.
+            - generic [ref=e86]:
+              - generic [ref=e87]: Rappel
+              - paragraph [ref=e88]: Parmi les cas réellement positifs, combien ont été correctement identifiés.
+            - generic [ref=e89]:
+              - generic [ref=e90]: F1-Score
+              - paragraph [ref=e91]: Moyenne harmonique de la Precision et du Rappel. Équilibre entre les deux.
+            - generic [ref=e92]:
+              - generic [ref=e93]: "% Erreur"
+              - paragraph [ref=e94]: Pourcentage de prédictions incorrectes (100% - Précision). Plus c'est bas, meilleur est le modèle.
+      - generic [ref=e95]:
+        - generic [ref=e96]: Importance des features
+        - application [ref=e100]:
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - generic [ref=e130]: "0"
+              - generic [ref=e132]: "0.15"
+              - generic [ref=e134]: "0.3"
+              - generic [ref=e136]: "0.45"
+              - generic [ref=e138]: "0.6"
+            - generic [ref=e139]:
+              - generic [ref=e141]: age
+              - generic [ref=e143]: salary
+              - generic [ref=e145]: city_Lyon
+              - generic [ref=e147]: city_Marseille
+              - generic [ref=e149]: city_Paris
+      - generic [ref=e150]:
+        - generic [ref=e151]: Exporter un modèle
+        - generic [ref=e153]:
+          - link "📥 random forest (meilleur)" [ref=e154] [cursor=pointer]:
+            - /url: http://localhost:8000/api/training/2d47cda2/export/random_forest
+            - button "📥 random forest (meilleur)" [ref=e155]
+          - link "📥 logistic regression" [ref=e156] [cursor=pointer]:
+            - /url: http://localhost:8000/api/training/2d47cda2/export/logistic_regression
+            - button "📥 logistic regression" [ref=e157]
+          - link "📥 gradient boosting" [ref=e158] [cursor=pointer]:
+            - /url: http://localhost:8000/api/training/2d47cda2/export/gradient_boosting
+            - button "📥 gradient boosting" [ref=e159]
+      - generic [ref=e160]:
+        - generic [ref=e161]: Prédiction par lot
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - generic [ref=e165]: "Modèle :"
+            - combobox [ref=e166]:
+              - option "random forest (meilleur)" [selected]
+              - option "logistic regression"
+              - option "gradient boosting"
+          - generic [ref=e167] [cursor=pointer]:
+            - button "Choose File" [ref=e168]
+            - paragraph [ref=e169]: Glisser-déposer un fichier CSV à prédire
+            - paragraph [ref=e170]: Mêmes colonnes que l'entraînement, sans la colonne cible
+  - generic [ref=e175] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e176]:
+      - img [ref=e177]
+    - generic [ref=e180]:
+      - button "Open issues overlay" [ref=e181]:
+        - generic [ref=e182]:
+          - generic [ref=e183]: "0"
+          - generic [ref=e184]: "1"
+        - generic [ref=e185]: Issue
+      - button "Collapse issues badge" [ref=e186]:
+        - img [ref=e187]
+  - alert [ref=e189]
+  - generic [ref=e190]: age

@@ -1,0 +1,42 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - heading "ML Studio" [level=1] [ref=e4]
+    - paragraph [ref=e5]: Entraînez vos modèles en quelques clics
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "📁 Charger" [ref=e8]:
+          - generic [ref=e9]: 📁
+          - generic [ref=e10]: Charger
+        - generic [ref=e11]: →
+      - generic [ref=e12]:
+        - button "🔍 Explorer" [disabled] [ref=e13]:
+          - generic [ref=e14]: 🔍
+          - generic [ref=e15]: Explorer
+        - generic [ref=e16]: →
+      - generic [ref=e17]:
+        - button "🎯 Cible" [disabled] [ref=e18]:
+          - generic [ref=e19]: 🎯
+          - generic [ref=e20]: Cible
+        - generic [ref=e21]: →
+      - generic [ref=e22]:
+        - button "⚙️ Préparer" [disabled] [ref=e23]:
+          - generic [ref=e24]: ⚙️
+          - generic [ref=e25]: Préparer
+        - generic [ref=e26]: →
+      - generic [ref=e27]:
+        - button "🚀 Entraîner" [disabled] [ref=e28]:
+          - generic [ref=e29]: 🚀
+          - generic [ref=e30]: Entraîner
+        - generic [ref=e31]: →
+      - button "📊 Résultats" [disabled] [ref=e33]:
+        - generic [ref=e34]: 📊
+        - generic [ref=e35]: Résultats
+    - generic [ref=e38] [cursor=pointer]:
+      - button "Choose File" [ref=e39]
+      - generic [ref=e40]: 📁
+      - paragraph [ref=e41]: Glisser-déposer un fichier CSV ou Excel
+      - paragraph [ref=e42]: ou cliquer pour parcourir
+      - paragraph [ref=e43]: "Formats : .csv, .xlsx, .xls — Max 50 Mo"
+  - button "Open Next.js Dev Tools" [ref=e49] [cursor=pointer]:
+    - img [ref=e50]
+  - alert [ref=e53]

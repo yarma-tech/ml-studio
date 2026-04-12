@@ -1,0 +1,65 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Railway Logo" [ref=e7] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Railway Logo" [ref=e9]
+        - button [ref=e13] [cursor=pointer]:
+          - generic [ref=e15]:
+            - generic "yarma-tech's Projects" [ref=e16]
+            - img [ref=e19]
+      - navigation [ref=e23]:
+        - link [ref=e25] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e28]
+        - link [ref=e31] [cursor=pointer]:
+          - /url: /workspace/templates
+          - img [ref=e34]
+        - link [ref=e39] [cursor=pointer]:
+          - /url: /workspace/usage
+          - img [ref=e42]
+        - link [ref=e45] [cursor=pointer]:
+          - /url: /workspace/people
+          - img [ref=e48]
+        - link [ref=e53] [cursor=pointer]:
+          - /url: /workspace
+          - img [ref=e56]
+      - generic [ref=e60]:
+        - link [ref=e62] [cursor=pointer]:
+          - /url: https://docs.railway.com
+          - generic [ref=e64]:
+            - img [ref=e66]
+            - img [ref=e70]
+        - link [ref=e73] [cursor=pointer]:
+          - /url: https://station.railway.com
+          - generic [ref=e75]:
+            - img [ref=e77]
+            - img [ref=e85]
+        - link [ref=e88] [cursor=pointer]:
+          - /url: https://backboard.railway.com/csc/auth/login?redirect_uri=https%3A%2F%2Fstation-server.railway.com%2Fauth%2Fcallback%3FredirectTo%3D%252Fmy-threads
+          - generic [ref=e90]:
+            - img [ref=e92]
+            - img [ref=e95]
+    - button [ref=e99] [cursor=pointer]:
+      - generic "yarma@yarmavideos.com" [ref=e101]
+    - button "Expand sidebar" [ref=e103]
+  - generic [ref=e105]:
+    - banner [ref=e106]:
+      - generic [ref=e107]:
+        - button [ref=e108] [cursor=pointer]:
+          - img [ref=e111]
+        - img "Loading..." [ref=e114]
+    - main [ref=e116]:
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - heading "Projects" [level=1] [ref=e120]
+          - link "New" [ref=e121] [cursor=pointer]:
+            - /url: /new?workspaceId=6d4db69b-9627-46bf-bce9-87b011209030
+            - img [ref=e123]
+            - generic [ref=e125]: New
+        - link "Create a New Project Deploy a GitHub Repository, Provision a Database, or create an Empty Project to start from local." [ref=e128] [cursor=pointer]:
+          - /url: /new?workspaceId=6d4db69b-9627-46bf-bce9-87b011209030
+          - generic [ref=e129]:
+            - paragraph [ref=e130]: Create a New Project
+            - paragraph [ref=e131]: Deploy a GitHub Repository, Provision a Database, or create an Empty Project to start from local.

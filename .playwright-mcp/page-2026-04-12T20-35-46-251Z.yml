@@ -1,0 +1,151 @@
+- generic [ref=e133]:
+  - banner [ref=e135]:
+    - generic [ref=e136]:
+      - link "Railway Logo" [ref=e137] [cursor=pointer]:
+        - /url: /dashboard
+        - img "Railway Logo" [ref=e139]
+      - generic [ref=e142]:
+        - button "enchanting-happiness" [ref=e145] [cursor=pointer]:
+          - generic "yarma-tech's Projects" [ref=e146]
+          - generic [ref=e148]: enchanting-happiness
+          - img [ref=e150]
+        - button "production" [ref=e154] [cursor=pointer]:
+          - generic [ref=e155]: production
+          - img [ref=e157]
+    - navigation [ref=e159]:
+      - generic [ref=e161]:
+        - button "Toggle activity" [ref=e163] [cursor=pointer]:
+          - img [ref=e165]
+        - button [ref=e167] [cursor=pointer]:
+          - img [ref=e170]
+        - button "30 days or $5.00 left" [ref=e173] [cursor=pointer]:
+          - paragraph [ref=e175]:
+            - generic [ref=e176]: 30 days or $5.00 left
+        - button "Agent" [ref=e178] [cursor=pointer]:
+          - img [ref=e180]
+          - text: Agent
+  - generic [ref=e182]:
+    - navigation "Project navigation" [ref=e183]:
+      - generic [ref=e184]:
+        - link "Architecture" [ref=e187] [cursor=pointer]:
+          - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c?environmentId=177b672a-41c3-4843-839a-428b87136bae
+          - img [ref=e189]
+        - link "Observability" [ref=e195] [cursor=pointer]:
+          - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/observability?environmentId=177b672a-41c3-4843-839a-428b87136bae
+          - img [ref=e197]
+        - link "Logs" [ref=e200] [cursor=pointer]:
+          - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/logs?environmentId=177b672a-41c3-4843-839a-428b87136bae
+          - img [ref=e202]
+        - link "Settings" [ref=e206] [cursor=pointer]:
+          - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/settings?environmentId=177b672a-41c3-4843-839a-428b87136bae
+          - img [ref=e208]
+      - button [ref=e211] [cursor=pointer]:
+        - generic "yarma@yarmavideos.com" [ref=e213]
+    - region [ref=e219]:
+      - generic [ref=e220]:
+        - generic [ref=e224]:
+          - img [ref=e225]
+          - generic [ref=e226]:
+            - generic [ref=e228]:
+              - generic:
+                - img
+                - button "ml-studio Building (00:22)" [ref=e324]:
+                  - link "ml-studio Building (00:22)" [active] [ref=e325] [cursor=pointer]:
+                    - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                    - generic [ref=e233]:
+                      - img [ref=e235]
+                      - paragraph [ref=e238]: ml-studio
+                    - generic [ref=e239]:
+                      - img [ref=e241]
+                      - paragraph [ref=e243]:
+                        - text: Building (
+                        - time [ref=e244]: 00:22
+                        - text: )
+            - toolbar "Canvas options" [ref=e246]:
+              - button "Canvas settings" [ref=e247] [cursor=pointer]:
+                - img [ref=e249]
+              - group "canvas action" [ref=e259]:
+                - button "Zoom in" [ref=e260] [cursor=pointer]:
+                  - img [ref=e262]
+                - button "Zoom out" [ref=e264] [cursor=pointer]:
+                  - img [ref=e266]
+                - button "Center canvas" [ref=e267] [cursor=pointer]:
+                  - img [ref=e269]
+              - group "canvas action" [ref=e274]:
+                - button "Undo" [ref=e275] [cursor=pointer]:
+                  - img [ref=e277]
+                - button "Redo" [ref=e280] [cursor=pointer]:
+                  - img [ref=e282]
+              - button "Visibility layers" [ref=e285] [cursor=pointer]:
+                - img [ref=e287]
+            - img [ref=e297]
+        - generic [ref=e328]:
+          - generic [ref=e329]:
+            - generic [ref=e330]:
+              - generic [ref=e332]:
+                - button [ref=e333] [cursor=pointer]:
+                  - img [ref=e335]
+                - heading "ml-studio" [level=1] [ref=e337]:
+                  - button "ml-studio" [ref=e338] [cursor=pointer]
+              - link [ref=e340] [cursor=pointer]:
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                - img [ref=e342]
+            - generic [ref=e344]:
+              - link "Deployments" [ref=e345] [cursor=pointer]:
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                - generic [ref=e346]: Deployments
+              - link "Variables" [ref=e348] [cursor=pointer]:
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/variables?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                - generic [ref=e349]: Variables
+              - link "Metrics" [ref=e350] [cursor=pointer]:
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/metrics?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                - generic [ref=e351]: Metrics
+              - link "Settings" [ref=e352] [cursor=pointer]:
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/settings?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                - generic [ref=e353]: Settings
+          - generic [ref=e356]:
+            - generic [ref=e357]:
+              - generic [ref=e358]:
+                - img [ref=e360]
+                - link "Unexposed service" [ref=e362] [cursor=pointer]:
+                  - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/settings?environmentId=177b672a-41c3-4843-839a-428b87136bae#networking-public
+              - generic [ref=e363]:
+                - generic [ref=e364]:
+                  - img [ref=e366]
+                  - link "asia-southeast1-eqsg3a" [ref=e369] [cursor=pointer]:
+                    - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/settings?environmentId=177b672a-41c3-4843-839a-428b87136bae#deploy-region-config
+                - generic [ref=e370]:
+                  - img [ref=e372]
+                  - link "1 Replica" [ref=e374] [cursor=pointer]:
+                    - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/settings?environmentId=177b672a-41c3-4843-839a-428b87136bae#deploy-region-config
+            - generic [ref=e376]:
+              - 'link "Building feat(backend): prepare for Railway deployment - Open CORS to production frontend URL via FRONTEND_URL env var - Add Procfile, railway.json, nixpacks.toml for Railway Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com> 21 seconds ago via GitHub View logs" [ref=e377] [cursor=pointer]':
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28?environmentId=177b672a-41c3-4843-839a-428b87136bae&id=91108a38-f75f-46e5-93d9-bb1e7541d512#build
+                - generic [ref=e378]:
+                  - generic [ref=e379]:
+                    - generic [ref=e381]: Building
+                    - img [ref=e386]
+                    - generic [ref=e388]:
+                      - paragraph [ref=e389]: "feat(backend): prepare for Railway deployment - Open CORS to production frontend URL via FRONTEND_URL env var - Add Procfile, railway.json, nixpacks.toml for Railway Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
+                      - paragraph [ref=e390]:
+                        - time [ref=e391]: 21 seconds ago
+                        - text: via GitHub
+                  - generic [ref=e392]:
+                    - button "Deployment actions" [ref=e393]:
+                      - img [ref=e395]
+                    - link "View logs" [ref=e399]:
+                      - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28?environmentId=177b672a-41c3-4843-839a-428b87136bae&id=91108a38-f75f-46e5-93d9-bb1e7541d512#build
+                      - generic [ref=e400]: View logs
+              - 'button "Deployment in progress: Taking a snapshot of the code... Building the image... Publishing image... Waiting for dependencies to deploy... Migrating volume... Running pre-deploy command... Creating containers... Tidying up previous deployments..." [ref=e403] [cursor=pointer]':
+                - generic [ref=e404]:
+                  - paragraph [ref=e405]: "Deployment in progress:"
+                  - generic [ref=e406]:
+                    - paragraph [ref=e408]: Taking a snapshot of the code...
+                    - paragraph [ref=e410]: Building the image...
+                    - paragraph [ref=e412]: Publishing image...
+                    - paragraph [ref=e414]: Waiting for dependencies to deploy...
+                    - paragraph [ref=e416]: Migrating volume...
+                    - paragraph [ref=e418]: Running pre-deploy command...
+                    - paragraph [ref=e420]: Creating containers...
+                    - paragraph [ref=e422]: Tidying up previous deployments...
+                - img [ref=e424]

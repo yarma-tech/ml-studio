@@ -1,0 +1,111 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e6]:
+      - generic [ref=e7]:
+        - link [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e10]
+        - button [ref=e16] [cursor=pointer]:
+          - generic [ref=e19]: New project
+      - navigation [ref=e20]:
+        - generic [ref=e22]:
+          - button [ref=e23] [cursor=pointer]:
+            - img [ref=e26]
+          - img [ref=e29]
+          - button [ref=e30] [cursor=pointer]
+    - region [ref=e40]:
+      - generic [ref=e45]:
+        - img [ref=e46]
+        - generic [ref=e49]:
+          - generic:
+            - img
+            - button [ref=e50]:
+              - generic [ref=e54]:
+                - combobox [expanded] [ref=e57]
+                - listbox [ref=e58]:
+                  - generic [ref=e59]:
+                    - option [selected] [ref=e60] [cursor=pointer]:
+                      - generic [ref=e61]:
+                        - img [ref=e63]
+                        - text: Create to-do list function with a database
+                    - option [ref=e65] [cursor=pointer]:
+                      - generic [ref=e66]:
+                        - img [ref=e68]
+                        - text: Deploy Redis, Postgres, and a Bucket
+                    - separator [ref=e70]
+                    - option [ref=e71] [cursor=pointer]:
+                      - generic [ref=e72]:
+                        - img [ref=e74]
+                        - text: GitHub Repository
+                        - img [ref=e77]
+                    - option [ref=e79] [cursor=pointer]:
+                      - generic [ref=e80]:
+                        - img [ref=e82]
+                        - text: Database
+                        - img [ref=e87]
+                    - option [ref=e89] [cursor=pointer]:
+                      - generic [ref=e90]:
+                        - img [ref=e92]
+                        - text: Template
+                        - img [ref=e95]
+                    - option [ref=e97] [cursor=pointer]:
+                      - generic [ref=e98]:
+                        - img [ref=e100]
+                        - text: Docker Image
+                        - img [ref=e103]
+                    - option [ref=e105] [cursor=pointer]:
+                      - generic [ref=e106]:
+                        - img [ref=e108]
+                        - text: Function
+                    - option [ref=e111] [cursor=pointer]:
+                      - generic [ref=e112]:
+                        - img [ref=e114]
+                        - text: Bucket
+                    - option [ref=e117] [cursor=pointer]:
+                      - generic [ref=e118]:
+                        - img [ref=e120]
+                        - text: Empty Project
+  - dialog "Terms of Service" [active] [ref=e125]:
+    - generic [ref=e126]:
+      - heading "Terms of Service" [level=3] [ref=e128]
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - img [ref=e132]
+          - heading "To use Railway, and keep it cool for everyone, you must accept our Terms of Service:" [level=1] [ref=e135]:
+            - text: To use Railway, and keep it cool for everyone,
+            - text: "you must accept our Terms of Service:"
+        - generic [ref=e136]:
+          - generic [ref=e137]:
+            - generic [ref=e138]:
+              - paragraph [ref=e139]: (1/2) Agree to our Privacy and Data Policy
+              - generic [ref=e195]:
+                - img [ref=e197]
+                - paragraph [ref=e199]: Agreed on 04/12
+            - separator [ref=e140]
+          - generic [ref=e200]:
+            - paragraph [ref=e201]: (2/2) Agree to our Fair Use Policy
+            - separator [ref=e202]
+            - paragraph [ref=e203]: Hosting or distributing any of the following items will ban your account permanently.
+            - list [ref=e204]:
+              - listitem [ref=e205]:
+                - img [ref=e207]
+                - paragraph [ref=e209]: Mirrors / Userbots
+              - listitem [ref=e210]:
+                - img [ref=e212]
+                - paragraph [ref=e215]: Crypto Miners
+              - listitem [ref=e216]:
+                - generic [ref=e217]: ©
+                - paragraph [ref=e218]: DMCA Protected Content
+              - listitem [ref=e219]:
+                - img [ref=e221]
+                - paragraph [ref=e224]: Torrent Aggregators
+              - listitem [ref=e225]:
+                - img [ref=e227]
+                - paragraph [ref=e230]: VNC / Virtual Desktops
+              - listitem [ref=e231]:
+                - img [ref=e233]
+                - paragraph [ref=e236]: Anything Illegal
+            - paragraph [ref=e237]: We encourage developers to learn and explore on Railway, making it accessible for everyone. However, we won't tolerate the abuse of resources that degrades the experience for others.
+            - button "Please review the list of banned items" [disabled] [ref=e238]:
+              - img [ref=e240]
+              - generic [ref=e242]: Please review the list of banned items

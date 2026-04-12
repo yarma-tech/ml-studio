@@ -1,0 +1,110 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e6]:
+      - generic [ref=e7]:
+        - link [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e10]
+        - button [ref=e16] [cursor=pointer]:
+          - generic [ref=e19]: New project
+      - navigation [ref=e20]:
+        - generic [ref=e22]:
+          - button [ref=e23] [cursor=pointer]:
+            - img [ref=e26]
+          - img [ref=e29]
+          - button [ref=e30] [cursor=pointer]
+    - region [ref=e40]:
+      - generic [ref=e45]:
+        - img [ref=e46]
+        - generic [ref=e49]:
+          - generic:
+            - img
+            - button [ref=e50]:
+              - generic [ref=e54]:
+                - combobox [expanded] [ref=e57]
+                - listbox [ref=e58]:
+                  - generic [ref=e59]:
+                    - option [selected] [ref=e60] [cursor=pointer]:
+                      - generic [ref=e61]:
+                        - img [ref=e63]
+                        - text: Create to-do list function with a database
+                    - option [ref=e65] [cursor=pointer]:
+                      - generic [ref=e66]:
+                        - img [ref=e68]
+                        - text: Deploy Redis, Postgres, and a Bucket
+                    - separator [ref=e70]
+                    - option [ref=e71] [cursor=pointer]:
+                      - generic [ref=e72]:
+                        - img [ref=e74]
+                        - text: GitHub Repository
+                        - img [ref=e77]
+                    - option [ref=e79] [cursor=pointer]:
+                      - generic [ref=e80]:
+                        - img [ref=e82]
+                        - text: Database
+                        - img [ref=e87]
+                    - option [ref=e89] [cursor=pointer]:
+                      - generic [ref=e90]:
+                        - img [ref=e92]
+                        - text: Template
+                        - img [ref=e95]
+                    - option [ref=e97] [cursor=pointer]:
+                      - generic [ref=e98]:
+                        - img [ref=e100]
+                        - text: Docker Image
+                        - img [ref=e103]
+                    - option [ref=e105] [cursor=pointer]:
+                      - generic [ref=e106]:
+                        - img [ref=e108]
+                        - text: Function
+                    - option [ref=e111] [cursor=pointer]:
+                      - generic [ref=e112]:
+                        - img [ref=e114]
+                        - text: Bucket
+                    - option [ref=e117] [cursor=pointer]:
+                      - generic [ref=e118]:
+                        - img [ref=e120]
+                        - text: Empty Project
+  - dialog "Terms of Service" [active] [ref=e125]:
+    - generic [ref=e126]:
+      - heading "Terms of Service" [level=3] [ref=e128]
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - img [ref=e132]
+          - heading "To use Railway, and keep it cool for everyone, you must accept our Terms of Service:" [level=1] [ref=e135]:
+            - text: To use Railway, and keep it cool for everyone,
+            - text: "you must accept our Terms of Service:"
+        - generic [ref=e137]:
+          - paragraph [ref=e139]: (1/2) Agree to our Privacy and Data Policy
+          - separator [ref=e140]
+          - generic [ref=e141]:
+            - paragraph [ref=e142]:
+              - text: Here's a summary of the things you need to know, or all the details in
+              - link "Full ToS ↗" [ref=e143] [cursor=pointer]:
+                - /url: /legal/terms
+            - generic [ref=e144]:
+              - generic [ref=e146]: "16"
+              - paragraph [ref=e147]: Be at least 16 years or older
+            - generic [ref=e148]:
+              - img [ref=e151]
+              - paragraph [ref=e154]: Railway will email you
+            - generic [ref=e155]:
+              - img [ref=e158]
+              - paragraph [ref=e161]: Railway can communicate to other services on your behalf like GitHub
+            - generic [ref=e162]:
+              - img [ref=e165]
+              - paragraph [ref=e168]: You grant Railway licenses to your user submissions under certain conditions
+            - generic [ref=e169]:
+              - img [ref=e172]
+              - paragraph [ref=e175]: You are responsible for what you host on Railway
+            - generic [ref=e176]:
+              - img [ref=e179]
+              - paragraph [ref=e181]: Railway is provided to you "as-is"
+            - generic [ref=e182]:
+              - generic [ref=e184]: ©
+              - paragraph [ref=e185]: We comply with copyright takedown requests
+            - generic [ref=e186]:
+              - img [ref=e189]
+              - paragraph [ref=e191]: We will try to notify you when these terms change
+          - button "I agree with Railway's Terms of Service" [ref=e193] [cursor=pointer]:
+            - generic [ref=e194]: I agree with Railway's Terms of Service

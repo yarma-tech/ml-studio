@@ -1,0 +1,42 @@
+- generic [ref=e280]:
+  - banner [ref=e282]:
+    - generic [ref=e283]:
+      - link "Railway Logo" [ref=e284] [cursor=pointer]:
+        - /url: /dashboard
+        - img "Railway Logo" [ref=e286]
+      - generic [ref=e289]:
+        - button "New project" [ref=e292] [cursor=pointer]:
+          - generic "yarma-tech's Projects" [ref=e293]
+          - generic [ref=e295]: New project
+        - paragraph [ref=e298]: GitHub
+    - navigation [ref=e299]:
+      - generic [ref=e301]:
+        - button [ref=e302] [cursor=pointer]:
+          - img [ref=e305]
+        - img "Loading..." [ref=e308]
+        - button [ref=e309] [cursor=pointer]:
+          - generic "yarma@yarmavideos.com" [ref=e311]
+  - region [ref=e319]:
+    - generic [ref=e324]:
+      - img [ref=e325]
+      - generic [ref=e328]:
+        - generic:
+          - img
+          - button "Configure GitHub App Refresh" [ref=e329]:
+            - generic [ref=e333]:
+              - combobox [expanded] [ref=e336]
+              - listbox "Suggestions" [ref=e337]:
+                - generic [ref=e338]:
+                  - separator [ref=e339]
+                  - option "Configure GitHub App Refresh" [selected] [ref=e340] [cursor=pointer]:
+                    - generic [ref=e341]:
+                      - button "Configure GitHub App" [active] [ref=e342]:
+                        - img [ref=e344]
+                        - generic [ref=e346]: Configure GitHub App
+                      - button "Refresh" [ref=e347]:
+                        - img [ref=e349]
+                        - generic [ref=e352]: Refresh
+                  - option "No repositories found - try a different search" [ref=e353] [cursor=pointer]:
+                    - generic [ref=e354]:
+                      - img [ref=e356]
+                      - text: No repositories found - try a different search

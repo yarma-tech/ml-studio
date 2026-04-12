@@ -1,0 +1,197 @@
+- generic [ref=e133]:
+  - banner [ref=e135]:
+    - generic [ref=e136]:
+      - link "Railway Logo" [ref=e137] [cursor=pointer]:
+        - /url: /dashboard
+        - img "Railway Logo" [ref=e139]
+      - generic [ref=e142]:
+        - button "enchanting-happiness" [ref=e145] [cursor=pointer]:
+          - generic "yarma-tech's Projects" [ref=e146]
+          - generic [ref=e148]: enchanting-happiness
+          - img [ref=e150]
+        - button "production" [ref=e154] [cursor=pointer]:
+          - generic [ref=e155]: production
+          - img [ref=e157]
+    - navigation [ref=e159]:
+      - generic [ref=e161]:
+        - button "Toggle activity" [ref=e163] [cursor=pointer]:
+          - img [ref=e165]
+        - button "1" [ref=e429] [cursor=pointer]:
+          - generic [ref=e168]:
+            - img [ref=e170]
+            - generic [ref=e430]: "1"
+        - button "30 days or $5.00 left" [ref=e173] [cursor=pointer]:
+          - paragraph [ref=e175]:
+            - generic [ref=e176]: 30 days or $5.00 left
+        - button "Agent" [ref=e178] [cursor=pointer]:
+          - img [ref=e180]
+          - text: Agent
+  - generic [ref=e182]:
+    - navigation "Project navigation" [ref=e183]:
+      - generic [ref=e184]:
+        - link "Architecture" [ref=e187] [cursor=pointer]:
+          - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c?environmentId=177b672a-41c3-4843-839a-428b87136bae
+          - img [ref=e189]
+        - link "Observability" [ref=e195] [cursor=pointer]:
+          - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/observability?environmentId=177b672a-41c3-4843-839a-428b87136bae
+          - img [ref=e197]
+        - link "Logs" [ref=e200] [cursor=pointer]:
+          - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/logs?environmentId=177b672a-41c3-4843-839a-428b87136bae
+          - img [ref=e202]
+        - link "Settings" [ref=e206] [cursor=pointer]:
+          - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/settings?environmentId=177b672a-41c3-4843-839a-428b87136bae
+          - img [ref=e208]
+      - button [ref=e211] [cursor=pointer]:
+        - generic "yarma@yarmavideos.com" [ref=e213]
+    - region [ref=e219]:
+      - generic [ref=e220]:
+        - generic [ref=e1062]:
+          - paragraph [ref=e1064]: Apply 1 change
+          - generic [ref=e1065]:
+            - button "Details" [ref=e1066] [cursor=pointer]:
+              - generic [ref=e1067]: Details
+            - button "Deploy ⇧+Enter" [ref=e1068] [cursor=pointer]:
+              - generic [ref=e1069]: Deploy ⇧+Enter
+            - button "Staged changes actions" [ref=e1070] [cursor=pointer]:
+              - img [ref=e1072]
+        - generic [ref=e224]:
+          - img [ref=e225]
+          - generic [ref=e226]:
+            - generic [ref=e228]:
+              - generic:
+                - img
+                - button "ml-studio Edited 1 Change" [ref=e1076]:
+                  - link "ml-studio Edited 1 Change" [ref=e1077] [cursor=pointer]:
+                    - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/variables?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                    - generic [ref=e233]:
+                      - img [ref=e235]
+                      - paragraph [ref=e238]: ml-studio
+                    - generic [ref=e1078]: Edited
+                    - generic [ref=e1079]:
+                      - img [ref=e1081]
+                      - paragraph [ref=e1084]: 1 Change
+            - toolbar "Canvas options" [ref=e246]:
+              - button "Canvas settings" [ref=e247] [cursor=pointer]:
+                - img [ref=e249]
+              - group "canvas action" [ref=e259]:
+                - button "Zoom in" [ref=e260] [cursor=pointer]:
+                  - img [ref=e262]
+                - button "Zoom out" [ref=e264] [cursor=pointer]:
+                  - img [ref=e266]
+                - button "Center canvas" [ref=e267] [cursor=pointer]:
+                  - img [ref=e269]
+              - group "canvas action" [ref=e274]:
+                - button "Undo" [ref=e275] [cursor=pointer]:
+                  - img [ref=e277]
+                - button "Redo" [ref=e280] [cursor=pointer]:
+                  - img [ref=e282]
+              - button "Visibility layers" [ref=e285] [cursor=pointer]:
+                - img [ref=e287]
+            - img [ref=e297]
+        - generic [ref=e328]:
+          - generic [ref=e329]:
+            - generic [ref=e330]:
+              - generic [ref=e332]:
+                - button [ref=e333] [cursor=pointer]:
+                  - img [ref=e335]
+                - heading "ml-studio" [level=1] [ref=e337]:
+                  - button "ml-studio" [ref=e338] [cursor=pointer]
+              - link [ref=e340] [cursor=pointer]:
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                - img [ref=e342]
+            - generic [ref=e344]:
+              - link "Deployments" [ref=e345] [cursor=pointer]:
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                - generic [ref=e346]: Deployments
+              - link "Variables" [active] [ref=e348] [cursor=pointer]:
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/variables?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                - generic [ref=e349]: Variables
+              - link "Metrics" [ref=e350] [cursor=pointer]:
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/metrics?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                - generic [ref=e351]: Metrics
+              - link "Settings" [ref=e352] [cursor=pointer]:
+                - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/settings?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                - generic [ref=e353]: Settings
+          - generic [ref=e1581]:
+            - generic [ref=e1582]:
+              - generic [ref=e1583]:
+                - generic [ref=e1584]: Service Variables
+                - generic [ref=e1585]:
+                  - button "Shared Variable" [ref=e1586] [cursor=pointer]:
+                    - img [ref=e1588]
+                    - generic [ref=e1591]: Shared Variable
+                  - button "Raw Editor" [ref=e1592] [cursor=pointer]:
+                    - img [ref=e1594]
+                    - generic [ref=e1596]: Raw Editor
+                  - button "New Variable" [ref=e1597] [cursor=pointer]:
+                    - img [ref=e1599]
+                    - generic [ref=e1601]: New Variable
+              - generic:
+                - generic:
+                  - generic:
+                    - button "Close":
+                      - generic:
+                        - img
+                    - generic:
+                      - generic:
+                        - img "graph of shared variable pointed to multiple services"
+                      - generic:
+                        - paragraph: Keep variables in sync across services
+                        - paragraph:
+                          - text: Create a shared variable in
+                          - link "Project Settings":
+                            - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/settings/variables?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                          - text: or promote an existing service variable to a shared variable via the
+                          - generic: "`⋮`"
+                          - text: icon.
+                        - generic:
+                          - link "Configure Shared Variables":
+                            - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/settings/variables?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                            - generic: Configure Shared Variables
+                          - link "View Docs":
+                            - /url: https://docs.railway.com/develop/variables#shared-variables
+                            - generic: View Docs
+            - generic [ref=e1602]:
+              - generic [ref=e1603]:
+                - button "Suggested Variables" [expanded] [ref=e1604] [cursor=pointer]:
+                  - img [ref=e1606]
+                  - paragraph [ref=e1608]: Suggested Variables
+                - generic [ref=e1609]:
+                  - paragraph [ref=e1610]: We found these variables in your source code
+                  - generic [ref=e1612]:
+                    - generic [ref=e1613]:
+                      - generic [ref=e1614]: Name
+                      - textbox "Name" [ref=e1616]:
+                        - /placeholder: VARIABLE_NAME
+                        - text: ANTHROPIC_API_KEY
+                    - group [ref=e1618]:
+                      - generic [ref=e1619]:
+                        - generic [ref=e1620]: Variable Value
+                        - generic [ref=e1621]:
+                          - textbox "Variable Value" [ref=e1622]:
+                            - /placeholder: "VALUE or ${{REF}}"
+                          - button [ref=e1623] [cursor=pointer]:
+                            - img [ref=e1627]
+                    - button "Remove" [ref=e1629] [cursor=pointer]:
+                      - img [ref=e1631]
+                    - generic [ref=e1633]:
+                      - generic [ref=e1634]: Name
+                      - textbox "Name" [ref=e1636]:
+                        - /placeholder: VARIABLE_NAME
+                        - text: FRONTEND_URL
+                    - group [ref=e1638]:
+                      - generic [ref=e1639]:
+                        - generic [ref=e1640]: Variable Value
+                        - generic [ref=e1641]:
+                          - textbox "Variable Value" [ref=e1642]:
+                            - /placeholder: "VALUE or ${{REF}}"
+                          - button [ref=e1643] [cursor=pointer]:
+                            - img [ref=e1647]
+                    - button "Remove" [ref=e1649] [cursor=pointer]:
+                      - img [ref=e1651]
+                    - button "Add" [disabled] [ref=e1654]:
+                      - img [ref=e1656]
+                      - generic [ref=e1658]: Add
+              - button "6 variables added by Railway" [ref=e1662] [cursor=pointer]:
+                - img [ref=e1664]
+                - paragraph [ref=e1666]: 6 variables added by Railway

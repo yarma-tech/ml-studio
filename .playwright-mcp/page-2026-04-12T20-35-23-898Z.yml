@@ -1,0 +1,93 @@
+- generic [ref=e2]:
+  - generic [ref=e133]:
+    - banner [ref=e135]:
+      - generic [ref=e136]:
+        - link "Railway Logo" [ref=e137] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Railway Logo" [ref=e139]
+        - generic [ref=e142]:
+          - button "enchanting-happiness" [ref=e145] [cursor=pointer]:
+            - generic "yarma-tech's Projects" [ref=e146]
+            - generic [ref=e148]: enchanting-happiness
+            - img [ref=e150]
+          - button "production" [ref=e154] [cursor=pointer]:
+            - generic [ref=e155]: production
+            - img [ref=e157]
+      - navigation [ref=e159]:
+        - generic [ref=e161]:
+          - button "Toggle activity" [ref=e163] [cursor=pointer]:
+            - img [ref=e165]
+          - button [ref=e167] [cursor=pointer]:
+            - img [ref=e170]
+          - button "30 days or $5.00 left" [ref=e173] [cursor=pointer]:
+            - paragraph [ref=e175]:
+              - generic [ref=e176]: 30 days or $5.00 left
+          - button "Agent" [ref=e178] [cursor=pointer]:
+            - img [ref=e180]
+            - text: Agent
+    - generic [ref=e182]:
+      - navigation "Project navigation" [ref=e183]:
+        - generic [ref=e184]:
+          - link "Architecture" [ref=e187] [cursor=pointer]:
+            - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c?environmentId=177b672a-41c3-4843-839a-428b87136bae
+            - img [ref=e189]
+          - link "Observability" [ref=e195] [cursor=pointer]:
+            - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/observability?environmentId=177b672a-41c3-4843-839a-428b87136bae
+            - img [ref=e197]
+          - link "Logs" [ref=e200] [cursor=pointer]:
+            - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/logs?environmentId=177b672a-41c3-4843-839a-428b87136bae
+            - img [ref=e202]
+          - link "Settings" [ref=e206] [cursor=pointer]:
+            - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/settings?environmentId=177b672a-41c3-4843-839a-428b87136bae
+            - img [ref=e208]
+        - button [ref=e211] [cursor=pointer]:
+          - generic "yarma@yarmavideos.com" [ref=e213]
+      - region [ref=e219]:
+        - generic [ref=e224]:
+          - img [ref=e225]
+          - generic [ref=e226]:
+            - generic [ref=e228]:
+              - generic:
+                - img
+                - button "ml-studio Initializing (00:00)" [ref=e229]:
+                  - link "ml-studio Initializing (00:00)" [ref=e232] [cursor=pointer]:
+                    - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                    - generic [ref=e233]:
+                      - img [ref=e235]
+                      - paragraph [ref=e238]: ml-studio
+                    - generic [ref=e239]:
+                      - img [ref=e241]
+                      - paragraph [ref=e243]:
+                        - text: Initializing (
+                        - time [ref=e244]: 00:00
+                        - text: )
+            - toolbar "Canvas options" [ref=e246]:
+              - button "Canvas settings" [ref=e247] [cursor=pointer]:
+                - img [ref=e249]
+              - group "canvas action" [ref=e259]:
+                - button "Zoom in" [ref=e260] [cursor=pointer]:
+                  - img [ref=e262]
+                - button "Zoom out" [ref=e264] [cursor=pointer]:
+                  - img [ref=e266]
+                - button "Center canvas" [ref=e267] [cursor=pointer]:
+                  - img [ref=e269]
+              - group "canvas action" [ref=e274]:
+                - button "Undo" [ref=e275] [cursor=pointer]:
+                  - img [ref=e277]
+                - button "Redo" [ref=e280] [cursor=pointer]:
+                  - img [ref=e282]
+              - button "Visibility layers" [ref=e285] [cursor=pointer]:
+                - img [ref=e287]
+            - button "Add" [ref=e292] [cursor=pointer]:
+              - img [ref=e294]
+              - generic [ref=e296]: Add
+            - img [ref=e297]
+  - generic [ref=e307]:
+    - img [ref=e309]
+    - generic [ref=e312]:
+      - generic [ref=e313]:
+        - paragraph [ref=e314]: All good, please continue
+        - link "Dismiss" [ref=e315] [cursor=pointer]:
+          - /url: ""
+          - img [ref=e317]
+      - paragraph [ref=e319]: Thank you for agreeing with our Terms of Service. You may now proceed with your deployment!

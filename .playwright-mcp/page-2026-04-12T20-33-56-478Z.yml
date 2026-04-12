@@ -1,0 +1,78 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - banner [ref=e6]:
+      - generic [ref=e7]:
+        - link "Railway Logo" [ref=e244] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Railway Logo" [ref=e245]
+        - button "New project" [ref=e246] [cursor=pointer]:
+          - generic "yarma-tech's Projects" [ref=e247]
+          - generic [ref=e19]: New project
+      - navigation [ref=e20]:
+        - generic [ref=e22]:
+          - button [ref=e23] [cursor=pointer]:
+            - img [ref=e26]
+          - img "Loading..." [ref=e248]
+          - button [ref=e30] [cursor=pointer]:
+            - generic "yarma@yarmavideos.com" [ref=e249]
+    - region [ref=e40]:
+      - generic [ref=e45]:
+        - img [ref=e46]
+        - generic [ref=e49]:
+          - generic:
+            - img
+            - button "Create to-do list function with a database" [ref=e250]:
+              - generic [ref=e54]:
+                - combobox [expanded] [active] [ref=e57]
+                - listbox "Suggestions" [ref=e251]:
+                  - generic [ref=e59]:
+                    - option "Create to-do list function with a database" [selected] [ref=e252] [cursor=pointer]:
+                      - generic [ref=e61]:
+                        - img [ref=e63]
+                        - text: Create to-do list function with a database
+                    - option "Deploy Redis, Postgres, and a Bucket" [ref=e253] [cursor=pointer]:
+                      - generic [ref=e66]:
+                        - img [ref=e68]
+                        - text: Deploy Redis, Postgres, and a Bucket
+                    - separator [ref=e70]
+                    - option "GitHub Repository" [ref=e254] [cursor=pointer]:
+                      - generic [ref=e72]:
+                        - img [ref=e74]
+                        - text: GitHub Repository
+                        - img [ref=e77]
+                    - option "Database" [ref=e255] [cursor=pointer]:
+                      - generic [ref=e80]:
+                        - img [ref=e82]
+                        - text: Database
+                        - img [ref=e87]
+                    - option "Template" [ref=e256] [cursor=pointer]:
+                      - generic [ref=e90]:
+                        - img [ref=e92]
+                        - text: Template
+                        - img [ref=e95]
+                    - option "Docker Image" [ref=e257] [cursor=pointer]:
+                      - generic [ref=e98]:
+                        - img [ref=e100]
+                        - text: Docker Image
+                        - img [ref=e103]
+                    - option "Function" [ref=e258] [cursor=pointer]:
+                      - generic [ref=e106]:
+                        - img [ref=e108]
+                        - text: Function
+                    - option "Bucket" [ref=e259] [cursor=pointer]:
+                      - generic [ref=e112]:
+                        - img [ref=e114]
+                        - text: Bucket
+                    - option "Empty Project" [ref=e260] [cursor=pointer]:
+                      - generic [ref=e118]:
+                        - img [ref=e120]
+                        - text: Empty Project
+  - generic [ref=e266]:
+    - img [ref=e268]
+    - generic [ref=e271]:
+      - generic [ref=e272]:
+        - paragraph [ref=e273]: All good, please continue
+        - link "Dismiss" [ref=e274] [cursor=pointer]:
+          - /url: ""
+          - img [ref=e276]
+      - paragraph [ref=e278]: Thank you for agreeing with our Terms of Service. You may now proceed with your deployment!

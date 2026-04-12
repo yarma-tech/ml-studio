@@ -1,0 +1,195 @@
+- generic [ref=e1]:
+  - generic [ref=e133]:
+    - banner [ref=e135]:
+      - generic [ref=e136]:
+        - link [ref=e1667] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e1668]
+        - generic [ref=e142]:
+          - button [ref=e1669] [cursor=pointer]:
+            - generic [ref=e148]: enchanting-happiness
+            - img [ref=e150]
+          - button [ref=e1671] [cursor=pointer]:
+            - generic [ref=e155]: production
+            - img [ref=e157]
+      - navigation [ref=e159]:
+        - generic [ref=e161]:
+          - button [ref=e1672] [cursor=pointer]:
+            - img [ref=e165]
+          - button [ref=e1673] [cursor=pointer]:
+            - generic [ref=e168]:
+              - img [ref=e170]
+              - generic [ref=e430]: "1"
+          - button [ref=e1674] [cursor=pointer]:
+            - paragraph [ref=e175]:
+              - generic [ref=e176]: 30 days or $5.00 left
+          - button [ref=e1675] [cursor=pointer]:
+            - img [ref=e180]
+            - text: Agent
+    - generic [ref=e182]:
+      - navigation [ref=e1676]:
+        - generic [ref=e184]:
+          - link [ref=e1677] [cursor=pointer]:
+            - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c?environmentId=177b672a-41c3-4843-839a-428b87136bae
+            - img [ref=e189]
+          - link [ref=e1678] [cursor=pointer]:
+            - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/observability?environmentId=177b672a-41c3-4843-839a-428b87136bae
+            - img [ref=e197]
+          - link [ref=e1679] [cursor=pointer]:
+            - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/logs?environmentId=177b672a-41c3-4843-839a-428b87136bae
+            - img [ref=e202]
+          - link [ref=e1680] [cursor=pointer]:
+            - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/settings?environmentId=177b672a-41c3-4843-839a-428b87136bae
+            - img [ref=e208]
+        - button [ref=e211] [cursor=pointer]
+      - region [ref=e219]:
+        - generic [ref=e220]:
+          - generic [ref=e224]:
+            - img [ref=e225]
+            - generic [ref=e226]:
+              - generic [ref=e228]:
+                - generic:
+                  - img
+                  - button [ref=e1682]:
+                    - link [ref=e1683] [cursor=pointer]:
+                      - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/variables?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                      - generic [ref=e233]:
+                        - img [ref=e235]
+                        - paragraph [ref=e238]: ml-studio
+                      - generic [ref=e1078]: Edited
+                      - generic [ref=e1079]:
+                        - img [ref=e1081]
+                        - paragraph [ref=e1084]: 1 Change
+              - toolbar [ref=e1684]:
+                - button [ref=e1685] [cursor=pointer]:
+                  - img [ref=e249]
+                - group [ref=e1686]:
+                  - button [ref=e1687] [cursor=pointer]:
+                    - img [ref=e262]
+                  - button [ref=e1688] [cursor=pointer]:
+                    - img [ref=e266]
+                  - button [ref=e1689] [cursor=pointer]:
+                    - img [ref=e269]
+                - group [ref=e1690]:
+                  - button [ref=e1691] [cursor=pointer]:
+                    - img [ref=e277]
+                  - button [ref=e1692] [cursor=pointer]:
+                    - img [ref=e282]
+                - button [ref=e1693] [cursor=pointer]:
+                  - img [ref=e287]
+              - img [ref=e297]
+          - generic [ref=e328]:
+            - generic [ref=e329]:
+              - generic [ref=e330]:
+                - generic [ref=e332]:
+                  - button [ref=e333] [cursor=pointer]:
+                    - img [ref=e335]
+                  - heading [level=1] [ref=e1694]:
+                    - button [ref=e1695] [cursor=pointer]: ml-studio
+                - link [ref=e340] [cursor=pointer]:
+                  - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                  - img [ref=e342]
+              - generic [ref=e344]:
+                - link [ref=e1696] [cursor=pointer]:
+                  - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                  - generic [ref=e346]: Deployments
+                - link [ref=e1697] [cursor=pointer]:
+                  - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/variables?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                  - generic [ref=e349]: Variables
+                - link [ref=e1698] [cursor=pointer]:
+                  - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/metrics?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                  - generic [ref=e351]: Metrics
+                - link [ref=e1699] [cursor=pointer]:
+                  - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/service/e20908c9-4f95-4ed1-8112-c88c9d206c28/settings?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                  - generic [ref=e353]: Settings
+            - generic [ref=e1581]:
+              - generic [ref=e1582]:
+                - generic [ref=e1583]:
+                  - generic [ref=e1584]: Service Variables
+                  - generic [ref=e1585]:
+                    - button [ref=e1700] [cursor=pointer]:
+                      - img [ref=e1588]
+                      - generic [ref=e1591]: Shared Variable
+                    - button [ref=e1701] [cursor=pointer]:
+                      - img [ref=e1594]
+                      - generic [ref=e1596]: Raw Editor
+                    - button [ref=e1702] [cursor=pointer]:
+                      - img [ref=e1599]
+                      - generic [ref=e1601]: New Variable
+                - generic:
+                  - button:
+                    - generic:
+                      - img
+                  - generic:
+                    - generic:
+                      - img
+                    - generic:
+                      - paragraph: Keep variables in sync across services
+                      - paragraph:
+                        - text: Create a shared variable in
+                        - link:
+                          - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/settings/variables?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                          - text: Project Settings
+                        - text: or promote an existing service variable to a shared variable via the
+                        - generic: "`⋮`"
+                        - text: icon.
+                      - generic:
+                        - link:
+                          - /url: /project/54939b51-ba5d-4715-9ba8-1b75d7ff789c/settings/variables?environmentId=177b672a-41c3-4843-839a-428b87136bae
+                          - generic: Configure Shared Variables
+                        - link:
+                          - /url: https://docs.railway.com/develop/variables#shared-variables
+                          - generic: View Docs
+              - generic [ref=e1602]:
+                - generic [ref=e1603]:
+                  - button [expanded] [ref=e1703] [cursor=pointer]:
+                    - img [ref=e1606]
+                    - paragraph [ref=e1608]: Suggested Variables
+                  - generic [ref=e1609]:
+                    - paragraph [ref=e1610]: We found these variables in your source code
+                    - generic [ref=e1612]:
+                      - generic [ref=e1633]:
+                        - generic [ref=e1634]: Name
+                        - textbox [ref=e1704]:
+                          - /placeholder: VARIABLE_NAME
+                          - text: FRONTEND_URL
+                      - group [ref=e1638]:
+                        - generic [ref=e1639]:
+                          - generic [ref=e1640]: Variable Value
+                          - generic [ref=e1641]:
+                            - textbox [ref=e1705]:
+                              - /placeholder: "VALUE or ${{REF}}"
+                            - button [ref=e1643] [cursor=pointer]:
+                              - img [ref=e1647]
+                      - button [ref=e1706] [cursor=pointer]:
+                        - img [ref=e1651]
+                      - button [disabled] [ref=e1707]:
+                        - img [ref=e1656]
+                        - generic [ref=e1658]: Add
+                - button [ref=e1708] [cursor=pointer]:
+                  - img [ref=e1664]
+                  - paragraph [ref=e1666]: 6 variables added by Railway
+  - dialog "Raw Environment Variable Editor" [active] [ref=e1710]:
+    - heading "Raw Environment Variable Editor" [level=3] [ref=e1712]
+    - generic [ref=e1713]:
+      - button "Rejeter"
+    - generic [ref=e1714]:
+      - heading "Raw Editor" [level=1] [ref=e1715]
+      - paragraph [ref=e1716]: Add, edit, or delete your project variables
+      - generic [ref=e1717]:
+        - generic [ref=e1718]:
+          - tablist [ref=e1719]:
+            - tab "ENV" [selected] [ref=e1720] [cursor=pointer]
+            - tab "JSON" [ref=e1721] [cursor=pointer]
+          - tabpanel "ENV" [ref=e1722]:
+            - textbox [ref=e1727]:
+              - generic [ref=e1728]:
+                - generic: HELLO=world\nFOO=bar
+        - generic [ref=e1729]:
+          - button "Copy ENV" [ref=e1730] [cursor=pointer]:
+            - img [ref=e1732]
+            - generic [ref=e1735]: Copy ENV
+          - button "Cancel" [ref=e1736] [cursor=pointer]:
+            - generic [ref=e1737]: Cancel
+          - button "Update Variables" [ref=e1738] [cursor=pointer]:
+            - generic [ref=e1739]: Update Variables
