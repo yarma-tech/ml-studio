@@ -2,10 +2,9 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-ARG CACHEBUST=4
 COPY requirements.txt .
-RUN pip install --no-cache-dir setuptools && \
-    pip install --no-cache-dir -r requirements.txt && \
+RUN pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir setuptools && \
     python -c "import pkg_resources; print('setuptools OK')"
 
 COPY . .
