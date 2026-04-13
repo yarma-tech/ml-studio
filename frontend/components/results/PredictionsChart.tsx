@@ -16,6 +16,13 @@ const MODEL_COLORS: Record<string, string> = {
   svr: "#8b5cf6",
 };
 
+function formatAxisNumber(value: number): string {
+  const abs = Math.abs(value);
+  if (abs >= 1_000_000) return `${(value / 1_000_000).toFixed(1).replace(/\.0$/, "")}M`;
+  if (abs >= 1_000) return `${(value / 1_000).toFixed(1).replace(/\.0$/, "")}K`;
+  return value % 1 === 0 ? String(value) : value.toFixed(2);
+}
+
 interface Props {
   trainingId: string;
   modelNames: string[];
@@ -103,11 +110,11 @@ export default function PredictionsChart({ trainingId, modelNames }: Props) {
       <ResponsiveContainer width="100%" height={400}>
         <ComposedChart data={mergedData} margin={{ top: 10, right: 20, bottom: 30, left: 10 }}>
           <XAxis
-            type="number" dataKey="actual" tick={{ fontSize: 11 }}
+            type="number" dataKey="actual" tick={{ fontSize: 11 }} tickFormatter={formatAxisNumber}
             label={{ value: "Valeur réelle", position: "bottom", fontSize: 12, fill: "#6b7280", offset: 10 }}
           />
           <YAxis
-            type="number" tick={{ fontSize: 11 }}
+            type="number" tick={{ fontSize: 11 }} tickFormatter={formatAxisNumber}
             label={{ value: "Valeur prédite", angle: -90, position: "insideLeft", fontSize: 12, fill: "#6b7280" }}
           />
           <Tooltip

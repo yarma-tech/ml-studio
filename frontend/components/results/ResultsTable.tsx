@@ -58,7 +58,7 @@ export default function ResultsTable({ models, taskType }: Props) {
                   </td>
                   {metricKeys.map((key) => (
                     <td key={key} className={`px-3 py-2 text-center ${model.is_best ? "text-rose-700 font-semibold" : ""}`}>
-                      {model.metrics[key]?.toFixed(4) ?? "—"}
+                      {model.metrics[key]?.toFixed(2) ?? "—"}
                     </td>
                   ))}
                 </tr>
@@ -76,7 +76,7 @@ export default function ResultsTable({ models, taskType }: Props) {
             <span className="text-gray-600">
               {taskType === "classification"
                 ? ` (${((best.metrics["accuracy"] ?? 0) * 100).toFixed(1)}% de prédictions correctes)`
-                : ` (R² = ${best.metrics["r2"]?.toFixed(4) ?? "—"})`
+                : ` (R² = ${best.metrics["r2"]?.toFixed(2) ?? "—"})`
               }
             </span>
           </div>
