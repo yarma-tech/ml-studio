@@ -1,6 +1,7 @@
 import uuid
 import joblib
 import io
+import logging
 from fastapi import APIRouter, HTTPException, BackgroundTasks, UploadFile, File
 from fastapi.responses import StreamingResponse
 import numpy as np
@@ -11,6 +12,10 @@ from ml.training import train_models
 from ml.evaluation import evaluate_model, get_confusion_matrix, get_feature_importance
 from api.websocket import set_status, get_status
 import pandas as pd
+
+logger = logging.getLogger(__name__)
+
+MAX_TRAINING_ROWS = 10000
 
 router = APIRouter(prefix="/api/training")
 
@@ -24,10 +29,15 @@ def _read_dataframe(path) -> pd.DataFrame:
 
 def _run_training(training_id: str, config: TrainingConfig):
     try:
+        logger.info(f"Training {training_id} started — dataset={config.dataset_id}, algos={config.algorithms}")
         set_status(training_id, {"training_id": training_id, "status": "training", "progress": 0})
 
         path = get_upload_path(config.dataset_id)
         df = _read_dataframe(path)
+
+        if len(df) > MAX_TRAINING_ROWS:
+            logger.info(f"Training {training_id}: sampling {MAX_TRAINING_ROWS} rows from {len(df)}")
+            df = df.sample(n=MAX_TRAINING_ROWS, random_state=42)
 
         prep_config = {
             "missing_strategy": config.preprocessing.missing_strategy,
@@ -85,10 +95,12 @@ def _run_training(training_id: str, config: TrainingConfig):
             "target_encoder": data.get("target_encoder"),
         }
 
+        logger.info(f"Training {training_id} complete — best model: {best_name}")
         set_status(training_id, {"training_id": training_id, "status": "complete", "progress": 100})
 
     except Exception as e:
-        set_status(training_id, {"training_id": training_id, "status": "error", "message": str(e)})
+        logger.exception(f"Training {training_id} failed")
+        set_status(training_id, {"training_id": training_id, "status": "error", "progress": 0, "message": str(e)})
 
 @router.post("/start")
 async def start_training(config: TrainingConfig, background_tasks: BackgroundTasks):

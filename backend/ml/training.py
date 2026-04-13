@@ -24,10 +24,16 @@ def train_models(data: dict, task_type: str, algorithms: list[str],
     results = {}
     total = len(algorithms)
 
+    large_dataset = len(data["X_train"]) > 5000
+
     for i, algo_name in enumerate(algorithms):
         if algo_name not in registry:
             continue
         model_class, param_grid = registry[algo_name]
+
+        # Reduce grid search for large datasets to avoid very long training
+        if large_dataset and param_grid:
+            param_grid = {k: v[:1] for k, v in param_grid.items()}
 
         if hyperparameter_tuning and param_grid:
             # Limit cv folds to number of samples in smallest class
