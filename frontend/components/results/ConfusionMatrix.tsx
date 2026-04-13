@@ -25,7 +25,7 @@ export default function ConfusionMatrix({ trainingId, modelName }: Props) {
                 {row.map((val, j) => {
                   const intensity = max > 0 ? val / max : 0;
                   const isDiagonal = i === j;
-                  return (<td key={j} className="px-3 py-2 text-center font-medium w-16 h-16" style={{ backgroundColor: isDiagonal ? `rgba(59, 130, 246, ${0.1 + intensity * 0.6})` : `rgba(239, 68, 68, ${intensity * 0.3})`, color: intensity > 0.5 ? "white" : "inherit" }}>{val}</td>);
+                  return (<td key={j} className="px-3 py-2 text-center font-medium w-16 h-16" style={{ backgroundColor: isDiagonal ? `rgba(225, 29, 72, ${0.1 + intensity * 0.6})` : `rgba(239, 68, 68, ${intensity * 0.3})`, color: intensity > 0.5 ? "white" : "inherit" }}>{val}</td>);
                 })}
               </tr>
             ))}

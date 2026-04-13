@@ -26,7 +26,7 @@ export default function Distribution() {
   return (
     <Card title="Distribution">
       <div className="mb-4">
-        <select value={selected} onChange={(e) => setSelected(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-lg text-sm">
+        <select value={selected} onChange={(e) => setSelected(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-500">
           {dataset.column_names.map((col) => (<option key={col} value={col}>{col}</option>))}
         </select>
       </div>
@@ -36,7 +36,7 @@ export default function Distribution() {
             <XAxis dataKey="label" tick={{ fontSize: 11 }} />
             <YAxis tick={{ fontSize: 11 }} />
             <Tooltip />
-            <Bar dataKey="count" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+            <Bar dataKey="count" fill="#E11D48" radius={[4, 4, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       )}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Syne, Geist_Mono } from "next/font/google";
+import { DM_Sans, Poltawski_Nowy, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -8,10 +8,10 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
-const syne = Syne({
-  variable: "--font-syne",
+const poltawski = Poltawski_Nowy({
+  variable: "--font-poltawski",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["700"],
 });
 
 const geistMono = Geist_Mono({
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${dmSans.variable} ${syne.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${poltawski.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

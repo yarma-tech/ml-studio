@@ -56,7 +56,7 @@ export default function TrainingProgress() {
       <div className="max-w-xl mx-auto text-center py-12">
         <p className="text-gray-600 mb-6">{algorithms.length} algorithme(s) sélectionné(s). Prêt à lancer l&apos;entraînement.</p>
         {hasExistingTraining && (
-          <p className="text-sm text-orange-500 mb-4">Un entraînement précédent existe. Cliquez pour en relancer un nouveau.</p>
+          <p className="text-sm text-orange-700 mb-4">Un entraînement précédent existe. Cliquez pour en relancer un nouveau.</p>
         )}
         <Button onClick={launch} disabled={algorithms.length === 0}>
           {hasExistingTraining ? "🔄 Relancer un entraînement" : "🚀 Lancer l\u2019entraînement"}
@@ -77,7 +77,7 @@ export default function TrainingProgress() {
               <span>{progress?.progress || 0}%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-              <div className="bg-blue-600 h-full rounded-full transition-all duration-500" style={{ width: `${progress?.progress || 0}%` }} />
+              <div className="bg-gradient-to-r from-rose-500 to-violet-500 h-full rounded-full transition-all duration-500" style={{ width: `${progress?.progress || 0}%` }} />
             </div>
           </div>
         )}

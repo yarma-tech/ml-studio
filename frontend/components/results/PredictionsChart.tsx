@@ -10,7 +10,7 @@ import Card from "@/components/ui/Card";
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 
 const MODEL_COLORS: Record<string, string> = {
-  random_forest: "#3b82f6",
+  random_forest: "#E11D48",
   linear_regression: "#10b981",
   gradient_boosting: "#f59e0b",
   svr: "#8b5cf6",
@@ -176,7 +176,7 @@ export default function PredictionsChart({ trainingId, modelNames }: Props) {
         ))}
       </div>
 
-      <p className="text-xs text-gray-400 text-center mt-3">
+      <p className="text-xs text-gray-500 text-center mt-3">
         La ligne noire droite représente la prédiction parfaite (prédit = réel).
         Les points colorés montrent les prédictions de chaque modèle.
         Plus les points sont proches de la ligne droite, meilleur est le modèle.

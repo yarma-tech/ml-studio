@@ -54,7 +54,7 @@ export default function BatchPredict({ trainingId, models }: Props) {
           <select
             value={selectedModel}
             onChange={(e) => setSelectedModel(e.target.value)}
-            className="border border-gray-300 rounded-lg px-3 py-1.5 text-sm"
+            className="border border-gray-300 rounded-xl px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-rose-500"
           >
             {models.map((m) => (
               <option key={m.name} value={m.name}>
@@ -67,8 +67,8 @@ export default function BatchPredict({ trainingId, models }: Props) {
         {/* Upload zone */}
         <div
           {...getRootProps()}
-          className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors ${
-            isDragActive ? "border-blue-500 bg-blue-50" : "border-gray-300 hover:border-blue-400"
+          className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition-colors ${
+            isDragActive ? "border-rose-400 bg-rose-50" : "border-gray-300 hover:border-rose-400"
           }`}
         >
           <input {...getInputProps()} />
@@ -79,7 +79,7 @@ export default function BatchPredict({ trainingId, models }: Props) {
               <p className="text-gray-600 text-sm font-medium">
                 Glisser-déposer un fichier CSV à prédire
               </p>
-              <p className="text-gray-400 text-xs mt-1">
+              <p className="text-gray-500 text-xs mt-1">
                 Mêmes colonnes que l&apos;entraînement, sans la colonne cible
               </p>
             </>
@@ -107,7 +107,7 @@ export default function BatchPredict({ trainingId, models }: Props) {
                       <th
                         key={col}
                         className={`px-3 py-2 text-left font-medium ${
-                          col === "prediction" ? "text-blue-700 bg-blue-50" : "text-gray-500"
+                          col === "prediction" ? "text-rose-700 bg-rose-50" : "text-gray-500"
                         }`}
                       >
                         {col}
@@ -122,7 +122,7 @@ export default function BatchPredict({ trainingId, models }: Props) {
                         <td
                           key={col}
                           className={`px-3 py-2 ${
-                            col === "prediction" ? "font-semibold text-blue-700 bg-blue-50/50" : "text-gray-700"
+                            col === "prediction" ? "font-semibold text-rose-700 bg-rose-50/50" : "text-gray-700"
                           }`}
                         >
                           {String(row[col] ?? "")}
@@ -133,7 +133,7 @@ export default function BatchPredict({ trainingId, models }: Props) {
                 </tbody>
               </table>
               {result.rows.length > 50 && (
-                <p className="text-xs text-gray-400 text-center py-2">
+                <p className="text-xs text-gray-500 text-center py-2">
                   Affichage limité aux 50 premières lignes — téléchargez le CSV pour voir tout
                 </p>
               )}

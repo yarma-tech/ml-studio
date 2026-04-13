@@ -22,7 +22,7 @@ function getErrorColor(model: ModelResult, taskType: string): string {
     ? (1 - (model.metrics["accuracy"] ?? 0)) * 100
     : Math.max(0, (1 - (model.metrics["r2"] ?? 0)) * 100);
   if (errorVal <= 10) return "text-green-600";
-  if (errorVal <= 30) return "text-orange-500";
+  if (errorVal <= 30) return "text-orange-700";
   return "text-red-500";
 }
 
@@ -51,13 +51,13 @@ export default function ResultsTable({ models, taskType }: Props) {
             </tr></thead>
             <tbody>
               {models.map((model) => (
-                <tr key={model.name} className={model.is_best ? "bg-blue-50" : ""}>
+                <tr key={model.name} className={model.is_best ? "bg-rose-50" : ""}>
                   <td className="px-3 py-2 font-medium">{model.is_best && "🏆 "}{model.name.replace(/_/g, " ")}</td>
                   <td className={`px-3 py-2 text-center font-bold ${getErrorColor(model, taskType)}`}>
                     {getErrorPercent(model, taskType)}
                   </td>
                   {metricKeys.map((key) => (
-                    <td key={key} className={`px-3 py-2 text-center ${model.is_best ? "text-blue-700 font-semibold" : ""}`}>
+                    <td key={key} className={`px-3 py-2 text-center ${model.is_best ? "text-rose-700 font-semibold" : ""}`}>
                       {model.metrics[key]?.toFixed(4) ?? "—"}
                     </td>
                   ))}
@@ -69,8 +69,8 @@ export default function ResultsTable({ models, taskType }: Props) {
 
         {/* Best model summary */}
         {models.filter((m) => m.is_best).map((best) => (
-          <div key={best.name} className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-sm">
-            <span className="font-semibold text-blue-700">🏆 Meilleur modèle : {best.name.replace(/_/g, " ")}</span>
+          <div key={best.name} className="mt-4 p-3 bg-rose-50 border border-rose-200 rounded-lg text-sm">
+            <span className="font-semibold text-rose-700">🏆 Meilleur modèle : {best.name.replace(/_/g, " ")}</span>
             <span className="text-gray-600"> — Taux d&apos;erreur de </span>
             <span className={`font-bold ${getErrorColor(best, taskType)}`}>{getErrorPercent(best, taskType)}</span>
             <span className="text-gray-600">

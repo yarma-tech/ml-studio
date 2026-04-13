@@ -27,7 +27,7 @@ export default function DataPreview() {
           <thead>
             <tr className="border-b border-gray-200">
               {columns.map((col) => (
-                <th key={col} className="px-3 py-2 text-left font-medium text-blue-600">{col}</th>
+                <th key={col} className="px-3 py-2 text-left font-medium text-rose-600">{col}</th>
               ))}
             </tr>
           </thead>

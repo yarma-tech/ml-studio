@@ -30,8 +30,8 @@ export default function AlgorithmPicker() {
       <Card title="Algorithmes">
         <div className="space-y-3">
           {available.map((algo) => (
-            <label key={algo.value} className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
-              <input type="checkbox" checked={algorithms.includes(algo.value)} onChange={() => toggle(algo.value)} className="mt-0.5 rounded" />
+            <label key={algo.value} className="flex items-start gap-3 p-3 rounded-lg hover:bg-rose-50 cursor-pointer">
+              <input type="checkbox" checked={algorithms.includes(algo.value)} onChange={() => toggle(algo.value)} className="mt-0.5 rounded accent-rose-600" />
               <div><div className="text-sm font-medium">{algo.label}</div><div className="text-xs text-gray-500">{algo.desc}</div></div>
             </label>
           ))}
@@ -40,7 +40,7 @@ export default function AlgorithmPicker() {
       <Card title="Options avancées">
         <div className="space-y-4">
           <label className="flex items-center gap-3">
-            <input type="checkbox" checked={hyperparameterTuning} onChange={(e) => setHyperparameterTuning(e.target.checked)} className="rounded" />
+            <input type="checkbox" checked={hyperparameterTuning} onChange={(e) => setHyperparameterTuning(e.target.checked)} className="rounded accent-rose-600" />
             <div><div className="text-sm font-medium">Optimisation des hyperparamètres (GridSearchCV)</div><div className="text-xs text-gray-500">Recherche automatique des meilleurs paramètres</div></div>
           </label>
           <div>

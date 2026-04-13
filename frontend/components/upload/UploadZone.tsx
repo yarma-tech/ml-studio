@@ -35,8 +35,8 @@ export default function UploadZone() {
     <div className="max-w-xl mx-auto">
       <div
         {...getRootProps()}
-        className={`border-2 border-dashed rounded-xl p-16 text-center cursor-pointer transition-colors ${
-          isDragActive ? "border-blue-500 bg-blue-50" : "border-gray-300 hover:border-blue-400"
+        className={`border-2 border-dashed rounded-2xl p-16 text-center cursor-pointer transition-colors ${
+          isDragActive ? "border-rose-400 bg-rose-50" : "border-gray-300 hover:border-rose-400"
         }`}
       >
         <input {...getInputProps()} />
@@ -46,8 +46,8 @@ export default function UploadZone() {
           <>
             <div className="text-4xl mb-4">📁</div>
             <p className="text-gray-600 font-medium">Glisser-déposer un fichier CSV ou Excel</p>
-            <p className="text-gray-400 text-sm mt-2">ou cliquer pour parcourir</p>
-            <p className="text-gray-300 text-xs mt-4">Formats : .csv, .xlsx, .xls — Max 50 Mo</p>
+            <p className="text-gray-500 text-sm mt-2">ou cliquer pour parcourir</p>
+            <p className="text-gray-500 text-xs mt-4">Formats : .csv, .xlsx, .xls — Max 50 Mo</p>
           </>
         )}
       </div>

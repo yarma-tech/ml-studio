@@ -20,7 +20,7 @@ export default function FeatureImportance({ trainingId, modelName }: Props) {
           <XAxis type="number" tick={{ fontSize: 11 }} />
           <YAxis type="category" dataKey="feature" tick={{ fontSize: 11 }} width={90} />
           <Tooltip />
-          <Bar dataKey="importance" fill="#3b82f6" radius={[0, 4, 4, 0]} />
+          <Bar dataKey="importance" fill="#E11D48" radius={[0, 4, 4, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </Card>
