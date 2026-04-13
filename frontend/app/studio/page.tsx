@@ -22,7 +22,7 @@ import { getTrainingResults } from "@/lib/api";
 import type { TrainingResults } from "@/lib/types";
 
 function StudioContent() {
-  const { currentStep, setStep, targetColumn, featureColumns, algorithms, trainingId, taskType } = useStepper();
+  const { currentStep, setStep, targetColumn, featureColumns, algorithms, trainingId, taskType, dataset, reset } = useStepper();
   const [results, setResults] = useState<TrainingResults | null>(null);
 
   useEffect(() => {
@@ -40,8 +40,23 @@ function StudioContent() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-5xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-heading font-bold text-center mb-2">ML Studio</h1>
-        <p className="text-gray-500 text-center text-sm mb-8">Entraînez vos modèles en quelques clics</p>
+        <div className="flex items-center justify-between mb-8">
+          <div className="w-32" />
+          <div className="text-center">
+            <h1 className="text-2xl font-heading font-bold mb-1">ML Studio</h1>
+            <p className="text-gray-500 text-sm">Entraînez vos modèles en quelques clics</p>
+          </div>
+          <div className="w-32 flex justify-end">
+            {dataset && (
+              <button
+                onClick={reset}
+                className="text-xs text-gray-500 hover:text-rose-600 transition-colors flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200 hover:border-rose-200 hover:bg-rose-50"
+              >
+                <span>↻</span> Nouvelle analyse
+              </button>
+            )}
+          </div>
+        </div>
         <Stepper />
         <div className="mt-8">
           {currentStep === 0 && <UploadZone />}
