@@ -26,3 +26,8 @@ def sample_csv(tmp_path):
         writer.writerow([22, 28000, "Marseille", "No"])
         writer.writerow([35, 52000, "Lyon", "Yes"])
     return path
+
+
+@pytest.fixture
+def sample_xls():
+    return Path(__file__).parent / "fixtures" / "sample.xls"

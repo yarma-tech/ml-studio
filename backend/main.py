@@ -1,3 +1,6 @@
+import logging
+import os
+
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -6,9 +9,12 @@ from api.training import router as training_router
 from api import websocket as ws_manager
 from storage.file_manager import cleanup_old_files
 
-app = FastAPI(title="ML Studio API")
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+)
 
-import os
+app = FastAPI(title="ML Studio API")
 
 allowed_origins = [
     "http://localhost:3000",

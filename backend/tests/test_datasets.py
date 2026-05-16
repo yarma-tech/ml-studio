@@ -17,6 +17,31 @@ def test_upload_invalid_format(client, tmp_path):
         response = client.post("/api/datasets/upload", files={"file": ("test.txt", f, "text/plain")})
     assert response.status_code == 400
 
+def test_upload_xls(client, sample_xls):
+    with open(sample_xls, "rb") as f:
+        response = client.post(
+            "/api/datasets/upload",
+            files={"file": ("sample.xls", f, "application/vnd.ms-excel")},
+        )
+    assert response.status_code == 200
+    data = response.json()
+    assert data["rows"] == 5
+    assert data["columns"] == 4
+    assert "age" in data["column_names"]
+
+def test_upload_corrupt_excel(client, tmp_path):
+    path = tmp_path / "corrupt.xlsx"
+    path.write_bytes(b"this is not a real excel file")
+    with open(path, "rb") as f:
+        response = client.post(
+            "/api/datasets/upload",
+            files={"file": ("corrupt.xlsx", f, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")},
+        )
+    assert response.status_code == 400
+    detail = response.json()["detail"]
+    assert detail["error"] == "parse_error"
+    assert "Impossible de lire" in detail["message"]
+
 def test_preview(client, sample_csv):
     with open(sample_csv, "rb") as f:
         upload = client.post("/api/datasets/upload", files={"file": ("sample.csv", f, "text/csv")})

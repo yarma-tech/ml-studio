@@ -1,8 +1,11 @@
+import logging
 import os
 import pandas as pd
 import numpy as np
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from storage.file_manager import save_upload, get_upload_path
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/datasets")
 
@@ -11,11 +14,23 @@ MAX_SIZE = 50 * 1024 * 1024  # 50 MB
 
 def _read_dataframe(path) -> pd.DataFrame:
     ext = path.suffix.lower()
-    if ext == ".csv":
-        return pd.read_csv(path)
-    elif ext in (".xlsx", ".xls"):
-        return pd.read_excel(path)
-    raise ValueError(f"Unsupported format: {ext}")
+    try:
+        if ext == ".csv":
+            return pd.read_csv(path)
+        elif ext in (".xlsx", ".xls"):
+            return pd.read_excel(path)
+        raise ValueError(f"Unsupported format: {ext}")
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.exception("Failed to parse dataset at %s", path)
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "error": "parse_error",
+                "message": f"Impossible de lire le fichier ({type(e).__name__}). Vérifiez que le format correspond bien à l'extension.",
+            },
+        )
 
 def _detect_column_type(series: pd.Series) -> str:
     if pd.api.types.is_numeric_dtype(series):
